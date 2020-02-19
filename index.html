@@ -192,7 +192,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-02-20 00:46:06" itemprop="dateModified" datetime="2020-02-20T00:46:06+08:00">2020-02-20</time>
+                <time title="修改時間：2020-02-20 00:48:56" itemprop="dateModified" datetime="2020-02-20T00:48:56+08:00">2020-02-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -233,22 +233,14 @@
       
           <h2 id="參考網站"><a href="#參考網站" class="headerlink" title="參考網站:"></a>參考網站:</h2><p>彭彭課程-參數預設值 (Youtube會員)<br> <a href="https://training.pada-x.com/online_premium.htm" target="_blank" rel="noopener">https://training.pada-x.com/online_premium.htm</a></p>
 <p>函式參數預設值 - 基礎範例<br><a href="https://ithelp.ithome.com.tw/articles/10213774" target="_blank" rel="noopener">https://ithelp.ithome.com.tw/articles/10213774</a></p>
-<h2 id="原有方式"><a href="#原有方式" class="headerlink" title="原有方式"></a>原有方式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function show(message)&#123;</span><br><span class="line">    if(typeof message&#x3D;&#x3D;&#x3D;&quot;undefined&quot;)&#123;  &#x2F;&#x2F;未給定message資料</span><br><span class="line">        message&#x3D;&quot;預設值&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    alert(message);</span><br><span class="line">&#125;</span><br><span class="line">show(&quot;Hello&quot;); &#x2F;&#x2F;顯示Hello</span><br><span class="line">show();  &#x2F;&#x2F;顯示預設值</span><br></pre></td></tr></table></figure>
-<h2 id="ES6的作法"><a href="#ES6的作法" class="headerlink" title="ES6的作法"></a>ES6的作法</h2><p>若未給定message資料，直接採用=後方指定的資料</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function show(message&#x3D;&quot;預設值&quot;)&#123;</span><br><span class="line">    alert(message);</span><br><span class="line">&#125;</span><br><span class="line">show(&quot;Hello&quot;); &#x2F;&#x2F;顯示Hello</span><br><span class="line">show();  &#x2F;&#x2F;顯示預設值</span><br></pre></td></tr></table></figure>
-
-<p>也可使用箭頭函式:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let show&#x3D;(message&#x3D;&quot;預設值&quot;)&#x3D;&gt;&#123;</span><br><span class="line">    alert(message);</span><br><span class="line">&#125;;</span><br><span class="line">show(&quot;Hello&quot;); &#x2F;&#x2F;顯示Hello</span><br><span class="line">show();  &#x2F;&#x2F;顯示預設值</span><br></pre></td></tr></table></figure>
-
-<h2 id="範例一"><a href="#範例一" class="headerlink" title="範例一:"></a>範例一:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function multiply(n1, n2&#x3D;1)&#123;</span><br><span class="line">    return n1*n2;</span><br><span class="line">&#125;</span><br><span class="line">multiply(3,4); &#x2F;&#x2F;回傳12</span><br><span class="line">multiply(5); &#x2F;&#x2F;回傳5</span><br></pre></td></tr></table></figure>
-<h2 id="範例一-箭頭函式"><a href="#範例一-箭頭函式" class="headerlink" title="範例一 箭頭函式:"></a>範例一 箭頭函式:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let multiply&#x3D;(n1,n2&#x3D;1)&#x3D;&gt;(n1*n2);  &#x2F;&#x2F;註:箭頭函式後方不用加上return,使用小括號會直接回傳</span><br><span class="line">multiply(3,4); &#x2F;&#x2F;回傳12</span><br><span class="line">multiply(5); &#x2F;&#x2F;回傳5</span><br></pre></td></tr></table></figure>
-<h2 id="範例二-後面的參數可使用前面的參數名稱"><a href="#範例二-後面的參數可使用前面的參數名稱" class="headerlink" title="範例二:後面的參數可使用前面的參數名稱"></a>範例二:後面的參數可使用前面的參數名稱</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function combine(first&#x3D;&quot;Louie&quot;,last&#x3D;&quot;Chen&quot;,name&#x3D;first+&quot; &quot;+last)&#123;</span><br><span class="line">    alert(name);</span><br><span class="line">&#125;</span><br><span class="line">combine(&quot;祥祥&quot;,&quot;陳&quot;); &#x2F;&#x2F;顯示祥祥 陳</span><br><span class="line">combine(&quot;祥祥&quot;);  &#x2F;&#x2F;顯示 祥祥 Chen</span><br><span class="line">combine();  &#x2F;&#x2F;顯示Louie Chen</span><br></pre></td></tr></table></figure>
-<h2 id="範例二-箭頭函數"><a href="#範例二-箭頭函數" class="headerlink" title="範例二:箭頭函數"></a>範例二:箭頭函數</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let combibe&#x3D;(first&#x3D;&quot;Louie&quot;,last&#x3D;&quot;Chen&quot;,name&#x3D;first+&quot; &quot;+last)&#x3D;&gt;&#123;</span><br><span class="line">    alert(name);</span><br><span class="line">&#125;</span><br><span class="line">combine(&quot;祥祥&quot;,&quot;陳&quot;); &#x2F;&#x2F;顯示祥祥 陳</span><br><span class="line">combine(&quot;祥祥&quot;);  &#x2F;&#x2F;顯示 祥祥 Chen</span><br><span class="line">combine();  &#x2F;&#x2F;顯示Louie Chen</span><br></pre></td></tr></table></figure>
-
-
-
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/02/19/200219-ES6-%E5%8F%83%E6%95%B8%E7%9A%84%E9%A0%90%E8%A8%AD%E5%80%BC/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

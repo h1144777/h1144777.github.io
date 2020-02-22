@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-Loading%20Bar.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"h1144777.github.io","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="參考網站:彭彭課程-類別物件 (Youtube會員) https:&#x2F;&#x2F;training.pada-x.com&#x2F;online_premium.htm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="200222-類別物件基本概念">
+<meta property="og:url" content="https://h1144777.github.io/2020/02/22/200222-%E9%A1%9E%E5%88%A5%E7%89%A9%E4%BB%B6%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/index.html">
+<meta property="og:site_name" content="h1144777學習日誌">
+<meta property="og:description" content="參考網站:彭彭課程-類別物件 (Youtube會員) https:&#x2F;&#x2F;training.pada-x.com&#x2F;online_premium.htm">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-02-22T14:06:01.000Z">
+<meta property="article:modified_time" content="2020-02-22T15:56:56.316Z">
+<meta property="article:author" content="祥祥">
+<meta property="article:tag" content="Javascript">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://h1144777.github.io/2020/02/22/200222-%E9%A1%9E%E5%88%A5%E7%89%A9%E4%BB%B6%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>200222-類別物件基本概念 | h1144777學習日誌</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158636214-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-158636214-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">h1144777學習日誌</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">從0開始</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>歸檔</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://h1144777.github.io/2020/02/22/200222-%E9%A1%9E%E5%88%A5%E7%89%A9%E4%BB%B6%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="祥祥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="h1144777學習日誌">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          200222-類別物件基本概念
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2020-02-22 22:06:01 / 修改時間：23:56:56" itemprop="dateCreated datePublished" datetime="2020-02-22T22:06:01+08:00">2020-02-22</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2020/02/22/200222-%E9%A1%9E%E5%88%A5%E7%89%A9%E4%BB%B6%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/02/22/200222-類別物件基本概念/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="參考網站"><a href="#參考網站" class="headerlink" title="參考網站:"></a>參考網站:</h2><p>彭彭課程-類別物件 (Youtube會員)<br> <a href="https://training.pada-x.com/online_premium.htm" target="_blank" rel="noopener">https://training.pada-x.com/online_premium.htm</a></p>
+ <a id="more"></a>
+
+<h2 id="基本觀念"><a href="#基本觀念" class="headerlink" title="基本觀念"></a>基本觀念</h2><pre><code>類別:設計圖。
+物件:根據設計圖製造出來的實體。
+例如一個展示盒的設計圖，可以用來產生無數個實體展示盒。
+換句話說，一個類別設計，可以用來產生無數個物件實體。
+基本類別設計會用到的關鍵字:class,constructor
+產生物件實體會用到的關鍵字:new
+物件實體以類別設計為基礎，但會依不同需求使內容有所差異。</code></pre><h2 id="定義類別並產生物件"><a href="#定義類別並產生物件" class="headerlink" title="定義類別並產生物件"></a>定義類別並產生物件</h2><pre><code>定義類別:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class 類別名稱&#123;&#125;    *註:先有類別才能建立物件</span><br></pre></td></tr></table></figure>
+建立物件:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new 類別名稱()</span><br></pre></td></tr></table></figure>
+例如:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;定義一個類別</span><br><span class="line">class Car&#123;&#125; </span><br><span class="line">&#x2F;&#x2F;利用定義好的類別產生新物件，並放進變數中</span><br><span class="line">let car1&#x3D;new Car()</span><br></pre></td></tr></table></figure></code></pre><h2 id="定義建構式-Constructor"><a href="#定義建構式-Constructor" class="headerlink" title="定義建構式(Constructor)"></a>定義建構式(Constructor)</h2><pre><code>在類別中定義建構式:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">constructor(參數列表)&#123;</span><br><span class="line">    建構式的內部程式</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+例如:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Car&#123;               &#x2F;&#x2F;定義一個類別</span><br><span class="line">    constructor()&#123;       &#x2F;&#x2F;在類別中定義建構式</span><br><span class="line">        console.log(&quot;建構式被呼叫&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;利用已經定義的類別產生新物件</span><br><span class="line">let car1&#x3D;new Car();  &#x2F;&#x2F;呼叫建構式，產生新物件</span><br></pre></td></tr></table></figure>
+建構式:建立新物件時被呼叫的函式，若是沒特別寫，Javascript會內建
+空白建構式constructor(){}，使程式可以運作。</code></pre><h2 id="定義、存取屬性-Attribute"><a href="#定義、存取屬性-Attribute" class="headerlink" title="定義、存取屬性(Attribute)"></a>定義、存取屬性(Attribute)</h2><pre><code>屬性:用來描述物件的個別差異。
+在建構式中建立屬性:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">constructor(參數列表)&#123;</span><br><span class="line">    this.屬性名稱&#x3D;初始資料;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+例如:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Car&#123;</span><br><span class="line">    constructor()&#123;</span><br><span class="line">        this.color&#x3D;&quot;red&quot;;   &#x2F;&#x2F;建立新屬性color，資料為red。</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;利用已經定義的類別產生新物件</span><br><span class="line">let car1&#x3D;new Car();  &#x2F;&#x2F;新物件擁有color屬性，資料為red。</span><br></pre></td></tr></table></figure>
+也可透過參數，彈性的在建立物件時提供資料:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Car&#123;</span><br><span class="line">    constructor(color)&#123;</span><br><span class="line">        this.color&#x3D;color;   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;利用已經定義的類別產生新物件</span><br><span class="line">let car1&#x3D;new Car(&quot;blue&quot;);  &#x2F;&#x2F;新物件擁有color屬性，資料為blue。</span><br><span class="line">let car2&#x3D;new Car(&quot;green&quot;);  &#x2F;&#x2F;新物件擁有color屬性，資料為green。</span><br><span class="line"></span><br><span class="line">存取物件屬性:</span><br><span class="line">    </span><br><span class="line">     物件.屬性名稱</span><br><span class="line">     物件.屬性名稱&#x3D;新的資料</span><br><span class="line"></span><br><span class="line">例如:</span><br></pre></td></tr></table></figure>
+class Car{
+    constructor(color){
+        this.color=color;   
+    }
+}
+let car1=new Car(&quot;blue&quot;);  //新物件擁有color屬性，資料為blue。
+console.log(car1.color);   //取得屬性資料，印出blue
+car1.color=&quot;red&quot;;          //更新屬性資料
+console.log(car1.color);   //取得新的屬性物件，印出red
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 定義、呼叫方法(Method)</span><br><span class="line"></span><br><span class="line">    方法:用來描述物件可以做的事，與物件綁定的函式。</span><br><span class="line">    換句話說，方法就是綁定在物件上面的函式。</span><br><span class="line"></span><br><span class="line">    在類別中建立方法:</span><br></pre></td></tr></table></figure>
+方法的名稱(參數列表){
+    內部的程式碼
+}
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例如:</span><br></pre></td></tr></table></figure>
+class Car{
+    constructor(color){
+        this.color=color;   
+    }
+    run(){      //定義一個run方法，透過物件呼叫並執行內部程式碼。
+        console.log(&quot;Running&quot;);   
+    }
+}
+let car1=new Car(&quot;blue&quot;)  //產生新物件，物件擁有color屬性與run方法。
+
+呼叫物件方法:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">物件.方法名稱(參數資料)</span><br></pre></td></tr></table></figure>
+例如:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Car&#123;</span><br><span class="line">    constructor(color)&#123;</span><br><span class="line">        this.color&#x3D;color;   </span><br><span class="line">    &#125;</span><br><span class="line">    run()&#123;      &#x2F;&#x2F;定義一個run方法，透過物件呼叫並執行內部程式碼。</span><br><span class="line">        console.log(&quot;Running&quot;);   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">let car1&#x3D;new Car(&quot;blue&quot;)  &#x2F;&#x2F;產生新物件，物件擁有color屬性與run方法。</span><br><span class="line">car1.run();  &#x2F;&#x2F;呼叫run方法，執行run內部程式，印出Running。</span><br></pre></td></tr></table></figure>
+
+在物件方法中使用this代表綁定物件:
+
+例如:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Car&#123;</span><br><span class="line">    constructor(color)&#123;</span><br><span class="line">        this.color&#x3D;color;   </span><br><span class="line">    &#125;</span><br><span class="line">    run()&#123;     </span><br><span class="line">        console.log(&quot;Car&quot;+this.color+&quot;Running&quot;);   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">let car1&#x3D;new Car(&quot;blue&quot;)  </span><br><span class="line">car1.run();  &#x2F;&#x2F;印出 Car blue Running</span><br></pre></td></tr></table></figure></code></pre><h2 id="物件屬性、方法的綜合操作"><a href="#物件屬性、方法的綜合操作" class="headerlink" title="物件屬性、方法的綜合操作"></a>物件屬性、方法的綜合操作</h2><p>以車輛做為比喻:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Car&#123;</span><br><span class="line">    construtcor(color)&#123;               &#x2F;&#x2F;建構式</span><br><span class="line">        this.color&#x3D;color;</span><br><span class="line">        this.speed&#x3D;0;                 &#x2F;&#x2F;初始資料，車輛的初始速度為0</span><br><span class="line">    &#125;</span><br><span class="line">    run(speed)&#123;                       &#x2F;&#x2F;方法</span><br><span class="line">        this.speed&#x3D;speed;             &#x2F;&#x2F;更新車輛速度(給予資料彈性輸入)</span><br><span class="line">        console.log(&quot;Car&quot;+this.color+&quot;Running at&quot;+this.speed+&quot;KM&#x2F;HR&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    stop()&#123;</span><br><span class="line">        this.speed&#x3D;0;                 &#x2F;&#x2F;更新車輛速度</span><br><span class="line">        console.log(&quot;Car&quot;+this.color+&quot;stopped);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">let car1&#x3D;new Car(&quot;blue&quot;);             &#x2F;&#x2F;產生新物件並放入變數中</span><br><span class="line">car1.run(50);                         &#x2F;&#x2F;印出Car blue Running at 50KM&#x2F;HR</span><br><span class="line">car1.stop();                          &#x2F;&#x2F;印出 Car blue stopped</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Javascript/" rel="tag"># Javascript</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/02/19/200219-ES6-%E5%8F%83%E6%95%B8%E7%9A%84%E9%A0%90%E8%A8%AD%E5%80%BC/" rel="prev" title="200219-參數的預設值">
+      <i class="fa fa-chevron-left"></i> 200219-參數的預設值
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#參考網站"><span class="nav-number">1.</span> <span class="nav-text">參考網站:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本觀念"><span class="nav-number">2.</span> <span class="nav-text">基本觀念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定義類別並產生物件"><span class="nav-number">3.</span> <span class="nav-text">定義類別並產生物件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定義建構式-Constructor"><span class="nav-number">4.</span> <span class="nav-text">定義建構式(Constructor)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定義、存取屬性-Attribute"><span class="nav-number">5.</span> <span class="nav-text">定義、存取屬性(Attribute)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#物件屬性、方法的綜合操作"><span class="nav-number">6.</span> <span class="nav-text">物件屬性、方法的綜合操作</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">祥祥</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:h1144777@gmail.com" title="E-Mail → mailto:h1144777@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/h1144777" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;h1144777" rel="noopener" target="_blank"><i class="fa fa-fw fa-facebook"></i>FB Page</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://instagram.com/h1144777" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;h1144777" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">祥祥</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 強力驅動 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主題 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.1
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/canvas_lines.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://h1144777.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+      this.language = "zh_TW";;
+    this.page.url = "https://h1144777.github.io/2020/02/22/200222-%E9%A1%9E%E5%88%A5%E7%89%A9%E4%BB%B6%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/";
+    this.page.identifier = "2020/02/22/200222-類別物件基本概念/";
+    this.page.title = "200222-類別物件基本概念";
+  
+  
+    
+  };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://h1144777.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

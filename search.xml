@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>200316-HTML-表單</title>
+      <link href="/2020/03/16/200316-HTML-%E8%A1%A8%E5%96%AE/"/>
+      <url>/2020/03/16/200316-HTML-%E8%A1%A8%E5%96%AE/</url>
+      
+        <content type="html"><![CDATA[<p>參考來源:<br>書籍:HTML&amp;CSS 網站設計建置優化之道<br><a href="https://www.wibibi.com/info.php?tid=188" target="_blank" rel="noopener">HTML Form 表單</a></p><p>表單指的是一些可以向網站訪客收集資訊的不同元素，例如簡單的搜尋框，到較複雜的申請表單等等。</p><a id="more"></a><h2 id="表單控制項"><a href="#表單控制項" class="headerlink" title="表單控制項"></a>表單控制項</h2><p>以下是幾種常用到的表單控制項:</p><p>加入文字</p><ul>  <li>文字輸入欄(單行):用來輸入單行文字，例如E-mail或姓名。</li>  <li>密碼輸入:會遮蔽輸入字元的文字輸入欄</li>  <li>文字區塊(多行):可輸入較多文字，用來回復訊息或回應等等。</li></ul><p>進行選擇</p><ul>  <li>單選鈕:讓使用者選擇單一選項。</li>  <li>勾選框:使用者可以勾選或取消一個或多個選項。</li>  <li>下拉選單:使用者必須從清單中選取其中一個選項。</li></ul><p>送出按鈕</p><ul>  <li>送出按鈕:從表單送出資料。</li>  <li>影像按鈕:同送出按鈕，但允許使用影像作為按鈕。</li></ul><p>上傳檔案<br> <ul><br>  <li>檔案上傳:允許用戶上傳檔案到網站上。</li><br> </ul></p><hr><h2 id="表單結構"><a href="#表單結構" class="headerlink" title="表單結構"></a>表單結構</h2><p><code>&lt;form&gt;</code>:表單控制項位在此標籤內，此標籤都會帶有action屬性，通常也都會有method以及id屬性。</p><ul>  <li>action:每個``<form>``元素</li> </ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 學習紀錄 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>200312-HTML複習-表格</title>
       <link href="/2020/03/12/200312-HTML%E8%A4%87%E7%BF%92-%E8%A1%A8%E6%A0%BC/"/>
       <url>/2020/03/12/200312-HTML%E8%A4%87%E7%BF%92-%E8%A1%A8%E6%A0%BC/</url>

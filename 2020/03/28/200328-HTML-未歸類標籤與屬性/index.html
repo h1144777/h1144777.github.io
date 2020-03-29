@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-blog-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/blog-icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/blog-icon-16x16.png">
+  <link rel="mask-icon" href="/images/BLOG%20LOGO.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Arial:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-fill-left.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"h1144777.github.io","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="在這一篇文章內，會放入一些未歸類但很實用的標籤屬性方法，以下是內容大綱:  在原始碼中加入註解。 id屬性與class屬性。 區塊與行內標籤。 使用&lt;div&gt;與&lt;span&gt;標籤作出群組效果。 使用&lt;iframe&gt;標籤崁入頁面。 使用&lt;meta&gt;標籤加入網頁資訊。 關於跳脫字元。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="200328-HTML-未歸類標籤與屬性">
+<meta property="og:url" content="https://h1144777.github.io/2020/03/28/200328-HTML-%E6%9C%AA%E6%AD%B8%E9%A1%9E%E6%A8%99%E7%B1%A4%E8%88%87%E5%B1%AC%E6%80%A7/index.html">
+<meta property="og:site_name" content="h1144777學習日誌">
+<meta property="og:description" content="在這一篇文章內，會放入一些未歸類但很實用的標籤屬性方法，以下是內容大綱:  在原始碼中加入註解。 id屬性與class屬性。 區塊與行內標籤。 使用&lt;div&gt;與&lt;span&gt;標籤作出群組效果。 使用&lt;iframe&gt;標籤崁入頁面。 使用&lt;meta&gt;標籤加入網頁資訊。 關於跳脫字元。">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-03-28T07:49:05.000Z">
+<meta property="article:modified_time" content="2020-03-29T16:25:56.440Z">
+<meta property="article:author" content="祥祥">
+<meta property="article:tag" content="HTML">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://h1144777.github.io/2020/03/28/200328-HTML-%E6%9C%AA%E6%AD%B8%E9%A1%9E%E6%A8%99%E7%B1%A4%E8%88%87%E5%B1%AC%E6%80%A7/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>200328-HTML-未歸類標籤與屬性 | h1144777學習日誌</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158636214-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-158636214-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">h1144777學習日誌</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">從0開始</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>歸檔</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/h1144777" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://h1144777.github.io/2020/03/28/200328-HTML-%E6%9C%AA%E6%AD%B8%E9%A1%9E%E6%A8%99%E7%B1%A4%E8%88%87%E5%B1%AC%E6%80%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.png">
+      <meta itemprop="name" content="祥祥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="h1144777學習日誌">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          200328-HTML-未歸類標籤與屬性
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2020-03-28 15:49:05" itemprop="dateCreated datePublished" datetime="2020-03-28T15:49:05+08:00">2020-03-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-03-30 00:25:56" itemprop="dateModified" datetime="2020-03-30T00:25:56+08:00">2020-03-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%B8%E7%BF%92%E7%B4%80%E9%8C%84/" itemprop="url" rel="index">
+                    <span itemprop="name">學習紀錄</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2020/03/28/200328-HTML-%E6%9C%AA%E6%AD%B8%E9%A1%9E%E6%A8%99%E7%B1%A4%E8%88%87%E5%B1%AC%E6%80%A7/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/03/28/200328-HTML-未歸類標籤與屬性/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>在這一篇文章內，會放入一些未歸類但很實用的標籤屬性方法，以下是內容大綱:</p>
+<ul style="list-style-type:circle;">
+<li><a href="#comment">在原始碼中加入註解。</a></li>
+<li><a href="#attributes">id屬性與class屬性。</a></li>
+<li><a href="#block_inline">區塊與行內標籤。</a></li>
+<li><a href="#div_span">使用&lt;div&gt;與&lt;span&gt;標籤作出群組效果。</a></li>
+<li><a href="#iframe">使用&lt;iframe&gt;標籤崁入頁面。</a></li>
+<li><a href="#meta">使用&lt;meta&gt;標籤加入網頁資訊。</a></li>
+<li><a href="#character">關於跳脫字元。</a></li>
+</ul>
+
+
+
+<a id="more"></a>
+
+<h2 id="comment">加入註解</h2>
+&lt;!-- --&gt;
+
+<p>在HTML裡，如果想將一些程式碼加入註解，可以利用這個標籤在原始碼內加入說明，讓檢視原始碼的人更清楚的檢視，這個標籤內容不會顯示在網頁上。</p>
+<p>例如:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 說明用途 開始 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>內容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 結束--&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="attributes">關於id選擇器與class選擇器</h2>
+
+<ul>
+<li><p>id選擇器</p>
+<p>id選擇器可以用在任何標籤上，為全域屬性，它的作用是在頁面的標籤中，將需要辨識的標籤獨立辨識，值必須以字母或下滑線作開頭，不能使用數字或是其他字元，同一個頁面上的兩個標籤也不能有相同的id屬性值，這個屬性可以與CSS、Javascript的程式碼作互動，之後的文章會慢慢說明。</p>
+</li>
+<li><p>class選擇器</p>
+<p>class選擇器也可套用在任何標籤，用途是用來把一些標籤做出獨立區隔或可以把想要做出同效果的標籤放入設定好的屬性內容，與id選擇器的不同為id選擇器在一個Html內只能使用一次，class選擇器則可以重複套用，並且id選擇器可被javascript及css運用，而class選擇器則只能被css運用。</p>
+</li>
+</ul>
+<hr>
+<h2 id="block_inline">區塊與行內標籤</h2>
+
+<ul>
+<li><p>區塊標籤</p>
+<p>以下這些標籤會在瀏覽器中另起一行:<br><code>&lt;h1&gt;</code><br><code>&lt;p&gt;</code><br><code>&lt;ul&gt;</code><br><code>&lt;li&gt;</code></p>
+</li>
+<li><p>行內標籤</p>
+<p>以下這些標籤會與前後標籤(若也是行內標籤)保持在同一行:</p>
+<p><code>&lt;a&gt;</code><br><code>&lt;b&gt;</code><br><code>&lt;em&gt;</code><br><code>&lt;img&gt;</code></p>
+</li>
+</ul>
+<hr>
+<h2 id="div_span">&lt;div&gt;與&lt;span&gt;標籤</h2>
+
+<ul>
+<li><p>&lt;div&gt;</p>
+<p>此標籤可以將多個標籤群組起來，做成一個區塊。例如可以製作&lt;div&gt;標籤來將網頁上不同位置或是功能的內容作出區分，也可以使用id選擇器或是class選擇器來決定&lt;div&gt;的CSS樣式，並改變外觀或是顯示大小等等。</p>
+</li>
+<li><p>&lt;span&gt;</p>
+<p>這個標籤為行內標籤，可以容納一個或多個行內標籤，或透過CSS來控制這些標籤內容的外觀，也可使用id選擇器與class選擇器。</p>
+</li>
+</ul>
+<hr>
+<h2 id="iframe">&lt;iframe&gt;標籤</h2>
+
+<p>&lt;iframe&gt;的用途是將其他網頁崁入自己的網頁中，常見的用法是將Google map崁入到所需的網頁內，這個標籤伴隨著以下屬性:</p>
+<ul>
+<li><p>src<br>這個屬性指定了框內的網址。</p>
+</li>
+<li><p>height<br>指定iframe的像素高度。</p>
+</li>
+<li><p>width<br>指定iframe像素寬度</p>
+</li>
+</ul>
+<ul>
+<li><p>seamless<br>套用到不需要卷軸的iframe之中，此屬性為HTML5的新屬性，不需要給定值，或者也可以寫作<code>seamless=&quot;seamless&quot;</code>。</p>
+</li>
+<li><p>scrolling、frameborder<br>這兩個屬性分別為卷軸是否顯示以及iframe是否顯示邊框，不過這兩個屬性在HTML5中已不再被支援，卷軸改用CSS的overflow方法，邊框則使用css的border方法替代。</p>
+</li>
+</ul>
+<p>以下為崁入地圖範例:</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src="https://www.google.com/maps/embed?pb=<span class="variable">!1m18!</span><span class="number">1</span>m12<span class="variable">!1m3!</span><span class="number">1</span>d1820.<span class="number">4383674487553</span><span class="variable">!2d120.66290283474652!</span><span class="number">3</span>d24.<span class="number">140966675421197</span><span class="variable">!2m3!</span><span class="number">1</span>f0<span class="variable">!2f0!</span><span class="number">3</span>f0<span class="variable">!3m2!</span><span class="number">1</span>i1024<span class="variable">!2i768!</span><span class="number">4</span>f13.<span class="number">1</span><span class="variable">!3m3!</span><span class="number">1</span>m2<span class="variable">!1s0x34693da636e451c9%3A0xb87dd5a0ca6c290e!</span><span class="number">2</span>z5ZyL56uL5Y-w54Gj576O6KGT6aSo<span class="variable">!5e0!</span><span class="number">3</span>m2<span class="variable">!1szh-TW!</span><span class="number">2</span>stw<span class="variable">!4v1585493367876!</span><span class="number">5</span>m2<span class="variable">!1szh-TW!</span><span class="number">2</span>stw" </span><br><span class="line">width="<span class="number">600</span>" </span><br><span class="line">height="<span class="number">450</span>" </span><br><span class="line">style="border:<span class="number">0</span>;"&gt;</span><br><span class="line">&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+
+<p>顯示如下</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1820.4383674487553!2d120.66290283474652!3d24.140966675421197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693da636e451c9%3A0xb87dd5a0ca6c290e!2z5ZyL56uL5Y-w54Gj576O6KGT6aSo!5e0!3m2!1szh-TW!2stw!4v1585493367876!5m2!1szh-TW!2stw" 
+width="600" 
+height="450" 
+style="border:0;">
+</iframe>
+
+<hr>
+<h2 id="meta">&lt;meta&gt;標籤與頁面資訊</h2>
+
+<p>&lt;meta&gt;標籤會放在&lt;head&gt;標籤內，用來存放關於此網頁的相關資訊，這些資訊不會顯示在瀏覽器中，只會在原始碼內出現，可以用這個標籤及屬性告訴搜尋引擎關於此網站、作者、網頁是否具有時間性等等資訊，此標籤不需要做結束標記。<br>最常用的屬性分別為name以及content，這兩個屬性通常會一起使用，name屬性的值用來放想要設定的特性，content屬性的值則是所設定特性的內容，以下是常用的屬性特性:</p>
+<p><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code><br>網頁的編碼宣告</p>
+<p><code>&lt;meta name=&quot;description&quot; content=&quot;描述內容&quot; /&gt;</code><br>這個特性包含了此頁的描述，通常會被搜尋引擎用來了解頁面內容，也會出現在搜尋引擎的結果中。</p>
+<p><code>&lt;meta name=&quot;keyword&quot; content=&quot;關鍵字內容&quot; /&gt;</code><br>這個特性為關鍵字，描述內容的字詞用逗號分開，但現在實際使用在搜尋引擎上索引已無明顯效果。</p>
+<p><code>&lt;meta name=&quot;robots&quot; content=&quot;&quot; /&gt;</code><br>這個特性用來告訴搜尋引擎是否應該把這個網站加入搜尋結果中，如果不應該加入，content的值為noindex,nofollow，如果要將這個頁面加入搜尋結果，但不加入網站的其他相關連結或頁面，則使用index,nofollow，若是要讓搜尋引擎正常抓取頁面上連結，但不要索引頁面則使用noindex , follow 。</p>
+<p>此標籤也可以使用http=equiv及content屬性，以下為範例:</p>
+<p><code>&lt;meta http=equiv=&quot;author&quot; content=&quot;作者名&quot; /&gt;</code><br>這是用來標明網頁的作者，content的值為作者名</p>
+<p><code>&lt;meta http=equiv=&quot;pragma&quot; content=&quot;no-cache&quot; /&gt;</code><br>此屬性避免瀏覽器儲存快取頁面</p>
+<p><code>＜meta http-equiv=&quot;expires&quot; content=&quot;&quot;Fri, 12 Jan 2001 18:18:18 GMT&quot;&quot;＞</code><br>用來設定頁面何時過期，不應該再快取，時間必須使用GMT的時間格式</p>
+<p>還有很多關於http=equiv的屬性及用法就不一一列出，在文章下方的參考資訊內有連結可以參考。</p>
+<hr>
+<h2 id="character">關於跳脫字元</h2>
+
+<p>跳脫字元也稱字元實體參照，有些字元會保留給HTML所使用，所以如果要讓文章顯示這些保留符號，就要輸入指定字元，網頁才會顯示出相對應的符號。以下是常用特殊符號</p>
+ <table>
+        <thead class="thead-dark">
+            <tr>
+                <th>符號</th>
+                <th>名稱指定字元</th>
+                <th>十進位指定字元</th>
+                <th>十六進位指定字元</th>
+                <th>意義</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr> </tr>
+            <tr>
+                <td>"</td>
+                <td>&amp;quot;</td>
+                <td>&amp;#34;</td>
+                <td>&amp;#x0022;</td>
+                <td>雙引號</td>
+            </tr>
+            <tr>
+                <td>&amp;</td>
+                <td>&amp;amp;</td>
+                <td>&amp;#38;</td>
+                <td>&amp;#x0026;</td>
+                <td>&amp;記號</td>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>&amp;lt;</td>
+                <td>&amp;#60;</td>
+                <td>&amp;#x003C;</td>
+                <td>小於</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>&amp;gt;</td>
+                <td>&amp;#62;</td>
+                <td>&amp;#x003E;</td>
+                <td>大於</td>
+            </tr>
+            <tr>
+                <td>ˆ</td>
+                <td>&amp;circ;</td>
+                <td>&amp;#710;</td>
+                <td>&amp;#x02C6;</td>
+                <td>進格修飾抑揚符</td>
+            </tr>
+            <tr>
+                <td>˜</td>
+                <td>&amp;tilde;</td>
+                <td>&amp;#732;</td>
+                <td>&amp;#x02DC;</td>
+                <td>小波浪符號</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>&amp;ensp;</td>
+                <td>&amp;#8194;</td>
+                <td>&amp;#x2002;</td>
+                <td title="寬度只及最闊字母的一半的空格">半格空格</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>&amp;emsp;</td>
+                <td>&amp;#8195;</td>
+                <td>&amp;#x2003;</td>
+                <td title="寬度達最闊字母的空格">全格空格</td>
+            </tr>
+            <tr>
+                <td>–</td>
+                <td>&amp;ndash;</td>
+                <td>&amp;#8211;</td>
+                <td>&amp;#x2013;</td>
+                <td>半格破折號</td>
+            </tr>
+            <tr>
+                <td>‘</td>
+                <td>&amp;lsquo;</td>
+                <td>&amp;#8216;</td>
+                <td>&amp;#x2018;</td>
+                <td>左單引號</td>
+            </tr>
+            <tr>
+                <td>’</td>
+                <td>&amp;rsquo;</td>
+                <td>&amp;#8217;</td>
+                <td>&amp;#x2019;</td>
+                <td>右單引號</td>
+            </tr>
+            <tr>
+                <td>‚</td>
+                <td>&amp;sbquo;</td>
+                <td>&amp;#8218;</td>
+                <td>&amp;#x201A;</td>
+                <td>單下引號</td>
+            </tr>
+            <tr>
+                <td>“</td>
+                <td>&amp;ldquo;</td>
+                <td>&amp;#8220;</td>
+                <td>&amp;#x201C;</td>
+                <td>左雙引號</td>
+            </tr>
+            <tr>
+                <td>”</td>
+                <td>&amp;rdquo;</td>
+                <td>&amp;#8221;</td>
+                <td>&amp;#x201D;</td>
+                <td>右雙引號</td>
+            </tr>
+            <tr>
+                <td>„</td>
+                <td>&amp;bdquo;</td>
+                <td>&amp;#8222;</td>
+                <td>&amp;#x201E;</td>
+                <td>雙下引號</td>
+            </tr>
+            <tr>
+                <td>‰</td>
+                <td>&amp;permil;</td>
+                <td>&amp;#8240;</td>
+                <td>&amp;#x2030;</td>
+                <td>千分之符號</td>
+            </tr>
+            <tr>
+                <td>‹</td>
+                <td>&amp;lsaquo;</td>
+                <td>&amp;#8249;</td>
+                <td>&amp;#x2039; </td>
+                <td>指左單尖引號</td>
+            </tr>
+            <tr>
+                <td>›</td>
+                <td>&amp;rsaquo;</td>
+                <td>&amp;#8250;</td>
+                <td>&amp;#x203A;</td>
+                <td>指右單尖引號</td>
+            </tr>
+            <tr>
+                <td>€</td>
+                <td>&amp;euro;</td>
+                <td>&amp;#8364;</td>
+                <td>&amp;#x20AC;</td>
+                <td>歐元符號</td>
+            </tr>
+            <tr>
+                <td>©</td>
+                <td>&amp;copy;</td>
+                <td>&amp;#169;</td>
+                <td>&amp;#x00A9;</td>
+                <td>版權符號</td>
+            </tr>
+            <tr>
+                <td>®</td>
+                <td>&amp;reg;</td>
+                <td>&amp;#174;</td>
+                <td>&amp;#x00AE;</td>
+                <td>註冊商標</td>
+            </tr>
+            <tr>
+                <td>°</td>
+                <td>&amp;deg;</td>
+                <td>&amp;#176;</td>
+                <td>&amp;#x00B0;</td>
+                <td>度</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+<h2 id="參考來源"><a href="#參考來源" class="headerlink" title="參考來源"></a>參考來源</h2><p>書籍:HTML&amp;CSS 網站設計建置優化之道</p>
+<p><a href="https://geek543.blogspot.com/2019/03/CSS-Tutorial-ID-selector.html" target="_blank" rel="noopener">自從會了ID選擇器,朝專業的前端工程師又更進一步!</a></p>
+<p><a href="https://www.footmark.info/web-design/html/special-symbol-table-html/" target="_blank" rel="noopener">HTML 特殊字元編碼符號對照表</a></p>
+<p><a href="https://spicyboyd.blogspot.com/2018/03/html-tagiframe-vedio.html" target="_blank" rel="noopener">HTML tag：iframe 與 video 在網頁內嵌影片的異同</a></p>
+<p><a href="https://www.yesharris.com/meta-robots-and-robots-txt/" target="_blank" rel="noopener">三分鐘搞懂 SEO的《meta robots、robots.txt》</a></p>
+<p><a href="https://www.cnblogs.com/sniper007/p/3258389.html" target="_blank" rel="noopener">META http-equiv 大全</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/HTML/" rel="tag"># HTML</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/16/200316-HTML-%E8%A1%A8%E5%96%AE/" rel="prev" title="200316-HTML-表單">
+      <i class="fa fa-chevron-left"></i> 200316-HTML-表單
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#comment"><span class="nav-number">1.</span> <span class="nav-text">加入註解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#attributes"><span class="nav-number">2.</span> <span class="nav-text">關於id選擇器與class選擇器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#block_inline"><span class="nav-number">3.</span> <span class="nav-text">區塊與行內標籤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#div_span"><span class="nav-number">4.</span> <span class="nav-text">&lt;div&gt;與&lt;span&gt;標籤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iframe"><span class="nav-number">5.</span> <span class="nav-text">&lt;iframe&gt;標籤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#meta"><span class="nav-number">6.</span> <span class="nav-text">&lt;meta&gt;標籤與頁面資訊</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#character"><span class="nav-number">7.</span> <span class="nav-text">關於跳脫字元</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#參考來源"><span class="nav-number">8.</span> <span class="nav-text">參考來源</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="祥祥"
+      src="/images/head.png">
+  <p class="site-author-name" itemprop="name">祥祥</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:h1144777@gmail.com" title="E-Mail → mailto:h1144777@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/h1144777" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;h1144777" rel="noopener" target="_blank"><i class="fa fa-fw fa-facebook"></i>FB Page</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://instagram.com/h1144777" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;h1144777" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">祥祥</span>
+</div>
+  <div class="theme-info">主題 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.1
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://h1144777.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+      this.language = "zh_TW";;
+    this.page.url = "https://h1144777.github.io/2020/03/28/200328-HTML-%E6%9C%AA%E6%AD%B8%E9%A1%9E%E6%A8%99%E7%B1%A4%E8%88%87%E5%B1%AC%E6%80%A7/";
+    this.page.identifier = "2020/03/28/200328-HTML-未歸類標籤與屬性/";
+    this.page.title = "200328-HTML-未歸類標籤與屬性";
+  
+  
+    
+  };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://h1144777.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

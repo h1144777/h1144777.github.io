@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>200401-HTML-表單練習</title>
+      <link href="/2020/04/02/200401-HTML-%E8%A1%A8%E5%96%AE%E7%B7%B4%E7%BF%92/"/>
+      <url>/2020/04/02/200401-HTML-%E8%A1%A8%E5%96%AE%E7%B7%B4%E7%BF%92/</url>
+      
+        <content type="html"><![CDATA[<p>此頁為表單練習<br>會將前面所學習到的表單製作方式做一些簡單的練習<br>之後學到的CSS等等也會一起應用在這一頁陸續更新</p><a id="more"></a><h2 id="簡單的帳號密碼輸入"><a href="#簡單的帳號密碼輸入" class="headerlink" title="簡單的帳號密碼輸入"></a>簡單的帳號密碼輸入</h2><style type=text/css>fieldset {    color: #008B8B;    display: block;    border: 1px solid #A9A9A9 ;    width: 400px;    margin-left: auto;    margin-right: auto;    background: #F8F8FF;}.Center {    margin-left: auto;    margin-right: auto;}label{    margin-left: 50px;}input[type="submit"]{    margin-left: 170px;}</style><form action="#">  <fieldset style:width= 400px; >  <legend class="Center">登入</legend>  <label>帳號:<input type="text" name="account" placeholder="請輸入帳號"/></label>  <br />  <label>密碼:<input type="password" name="password" placeholder="請輸入密碼" /></label>  <br />  <input type="submit" value="送出" />  </fieldset>]]></content>
+      
+      
+      <categories>
+          
+          <category> 學習紀錄 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>200328-HTML-未歸類標籤與屬性</title>
       <link href="/2020/03/28/200328-HTML-%E6%9C%AA%E6%AD%B8%E9%A1%9E%E6%A8%99%E7%B1%A4%E8%88%87%E5%B1%AC%E6%80%A7/"/>
       <url>/2020/03/28/200328-HTML-%E6%9C%AA%E6%AD%B8%E9%A1%9E%E6%A8%99%E7%B1%A4%E8%88%87%E5%B1%AC%E6%80%A7/</url>

@@ -30,7 +30,7 @@
 <meta property="og:description" content="此頁為表單練習會將前面所學習到的表單製作方式做一些簡單的練習之後學到的CSS等等也會一起應用在這一頁陸續更新">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-04-01T16:49:22.000Z">
-<meta property="article:modified_time" content="2020-04-01T17:50:35.142Z">
+<meta property="article:modified_time" content="2020-04-03T06:45:31.127Z">
 <meta property="article:author" content="祥祥">
 <meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary">
@@ -190,10 +190,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2020-04-02 00:49:22 / 修改時間：01:50:35" itemprop="dateCreated datePublished" datetime="2020-04-02T00:49:22+08:00">2020-04-02</time>
+              <time title="創建時間：2020-04-02 00:49:22" itemprop="dateCreated datePublished" datetime="2020-04-02T00:49:22+08:00">2020-04-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-04-03 14:45:31" itemprop="dateModified" datetime="2020-04-03T14:45:31+08:00">2020-04-03</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -242,36 +248,78 @@
 <a id="more"></a>
 
 <h2 id="簡單的帳號密碼輸入"><a href="#簡單的帳號密碼輸入" class="headerlink" title="簡單的帳號密碼輸入"></a>簡單的帳號密碼輸入</h2><style type=text/css>
-fieldset {
+.login{
     color: #008B8B;
     display: block;
     border: 1px solid #A9A9A9 ;
     width: 400px;
-    margin-left: auto;
-    margin-right: auto;
     background: #F8F8FF;
 }
 .Center {
     margin-left: auto;
     margin-right: auto;
 }
-label{
-    margin-left: 50px;
+.lo-gin{
+    margin-left: auto;
+    margin-right: auto;
 }
-input[type="submit"]{
-    margin-left: 170px;
+.profile{
+    width: 600px;
+    height: 150px;   
+}
+.personaldata{
+    line-height: 50px;
 }
 </style>
 <form action="#">
-  <fieldset style:width= 400px; >
+  <fieldset class="login">
   <legend class="Center">登入</legend>
   <label>帳號:<input type="text" name="account" placeholder="請輸入帳號"/></label>
   <br />
   <label>密碼:<input type="password" name="password" placeholder="請輸入密碼" /></label>
   <br />
-  <input type="submit" value="送出" />
+  <input class="log-in" type="submit" value="送出" />
   </fieldset>
 
+<hr>
+<h2 id="個人資料輸入表單"><a href="#個人資料輸入表單" class="headerlink" title="個人資料輸入表單"></a>個人資料輸入表單</h2><form action="#">  
+    <fieldset class="personaldata">
+      <legend>個人資料</legend>
+      <label>姓名:<input type="text" name="name"/></label>
+      <br />
+      <label>性別:
+        <input id="male" type="radio" name="sex" value="m" />
+        <label for="male">男</label>
+        <input id="female" type="radio" name="sex" value="f" />
+        <label for="female">女</label>
+      </label>
+      <br />
+      <label>出生日期:<input type="date" name="birthday"/></label>
+      <br />
+      <label>居住地區:
+        <select name="domicile">
+          <option value="0" selected>居住地</option>
+          <option value="Taipei">北北基宜</option>
+          <option value="Taoyuan">桃竹苗</option>
+          <option value="Taichung">中彰投</option>
+          <option value="Yunlin">雲嘉南</option>
+          <option value="Kaohsiung">高屏</option>
+          <option value="Hualien">花東</option>
+          <option value="Penghu">澎金馬</option>
+        </select>  
+       </label>   
+          <br />
+      <label>電子郵件:<input type="email" name="email" />
+      <br />
+      <label>履歷:<input type="file" name="Resume" /></label>
+      <br />
+      <label for="profile">個人簡介:</label>
+      <br />
+      <textarea id="profile" class="profile" name="personal-profile" placeholder="請自我介紹，最少30字以上"></textarea>
+      <br />
+      <input type="submit" value="送出" />
+    </fieldset>
+</form>
 
     </div>
 
@@ -293,7 +341,10 @@ input[type="submit"]{
     <a href="/2020/03/28/200328-HTML-%E6%9C%AA%E6%AD%B8%E9%A1%9E%E6%A8%99%E7%B1%A4%E8%88%87%E5%B1%AC%E6%80%A7/" rel="prev" title="200328-HTML-未歸類標籤與屬性">
       <i class="fa fa-chevron-left"></i> 200328-HTML-未歸類標籤與屬性
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/03/200403-HTML-%E8%A6%96%E8%A8%8A%E5%92%8C%E9%9F%B3%E8%A8%8A/" rel="next" title="200403-HTML-視訊和音訊">
+      200403-HTML-視訊和音訊 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -360,7 +411,7 @@ input[type="submit"]{
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#簡單的帳號密碼輸入"><span class="nav-number">1.</span> <span class="nav-text">簡單的帳號密碼輸入</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#簡單的帳號密碼輸入"><span class="nav-number">1.</span> <span class="nav-text">簡單的帳號密碼輸入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#個人資料輸入表單"><span class="nav-number">2.</span> <span class="nav-text">個人資料輸入表單</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -376,7 +427,7 @@ input[type="submit"]{
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>

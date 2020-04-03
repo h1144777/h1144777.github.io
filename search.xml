@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>200403-HTML-視訊和音訊</title>
+      <link href="/2020/04/03/200403-HTML-%E8%A6%96%E8%A8%8A%E5%92%8C%E9%9F%B3%E8%A8%8A/"/>
+      <url>/2020/04/03/200403-HTML-%E8%A6%96%E8%A8%8A%E5%92%8C%E9%9F%B3%E8%A8%8A/</url>
+      
+        <content type="html"><![CDATA[<p>這篇文章內會有一些關於將影片與音訊加入到網頁內的方法。</p><p>可以使用HTML5中的<code>&lt;video&gt;</code>標籤，可以更簡單方便的將影片放到網站之中，要注意影片格式，目前瀏覽器支援度最高的影片格式為MP4。也可使用另一種方法，利用現在的線上影音平台(例如Youtube)，將影片上傳到影音平台後再崁入到網頁中，以下會有關於兩種做法的說明。</p><a id="more"></a><h2 id="HTML加入-lt-video-gt"><a href="#HTML加入-lt-video-gt" class="headerlink" title="HTML加入&lt;video&gt;"></a>HTML加入<code>&lt;video&gt;</code></h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 學習紀錄 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>200401-HTML-表單練習</title>
       <link href="/2020/04/02/200401-HTML-%E8%A1%A8%E5%96%AE%E7%B7%B4%E7%BF%92/"/>
       <url>/2020/04/02/200401-HTML-%E8%A1%A8%E5%96%AE%E7%B7%B4%E7%BF%92/</url>
       
-        <content type="html"><![CDATA[<p>此頁為表單練習<br>會將前面所學習到的表單製作方式做一些簡單的練習<br>之後學到的CSS等等也會一起應用在這一頁陸續更新</p><a id="more"></a><h2 id="簡單的帳號密碼輸入"><a href="#簡單的帳號密碼輸入" class="headerlink" title="簡單的帳號密碼輸入"></a>簡單的帳號密碼輸入</h2><style type=text/css>fieldset {    color: #008B8B;    display: block;    border: 1px solid #A9A9A9 ;    width: 400px;    margin-left: auto;    margin-right: auto;    background: #F8F8FF;}.Center {    margin-left: auto;    margin-right: auto;}label{    margin-left: 50px;}input[type="submit"]{    margin-left: 170px;}</style><form action="#">  <fieldset style:width= 400px; >  <legend class="Center">登入</legend>  <label>帳號:<input type="text" name="account" placeholder="請輸入帳號"/></label>  <br />  <label>密碼:<input type="password" name="password" placeholder="請輸入密碼" /></label>  <br />  <input type="submit" value="送出" />  </fieldset>]]></content>
+        <content type="html"><![CDATA[<p>此頁為表單練習<br>會將前面所學習到的表單製作方式做一些簡單的練習<br>之後學到的CSS等等也會一起應用在這一頁陸續更新</p><a id="more"></a><h2 id="簡單的帳號密碼輸入"><a href="#簡單的帳號密碼輸入" class="headerlink" title="簡單的帳號密碼輸入"></a>簡單的帳號密碼輸入</h2><style type=text/css>.login{    color: #008B8B;    display: block;    border: 1px solid #A9A9A9 ;    width: 400px;    background: #F8F8FF;}.Center {    margin-left: auto;    margin-right: auto;}.lo-gin{    margin-left: auto;    margin-right: auto;}.profile{    width: 600px;    height: 150px;   }.personaldata{    line-height: 50px;}</style><form action="#">  <fieldset class="login">  <legend class="Center">登入</legend>  <label>帳號:<input type="text" name="account" placeholder="請輸入帳號"/></label>  <br />  <label>密碼:<input type="password" name="password" placeholder="請輸入密碼" /></label>  <br />  <input class="log-in" type="submit" value="送出" />  </fieldset><hr><h2 id="個人資料輸入表單"><a href="#個人資料輸入表單" class="headerlink" title="個人資料輸入表單"></a>個人資料輸入表單</h2><form action="#">      <fieldset class="personaldata">      <legend>個人資料</legend>      <label>姓名:<input type="text" name="name"/></label>      <br />      <label>性別:        <input id="male" type="radio" name="sex" value="m" />        <label for="male">男</label>        <input id="female" type="radio" name="sex" value="f" />        <label for="female">女</label>      </label>      <br />      <label>出生日期:<input type="date" name="birthday"/></label>      <br />      <label>居住地區:        <select name="domicile">          <option value="0" selected>居住地</option>          <option value="Taipei">北北基宜</option>          <option value="Taoyuan">桃竹苗</option>          <option value="Taichung">中彰投</option>          <option value="Yunlin">雲嘉南</option>          <option value="Kaohsiung">高屏</option>          <option value="Hualien">花東</option>          <option value="Penghu">澎金馬</option>        </select>         </label>             <br />      <label>電子郵件:<input type="email" name="email" />      <br />      <label>履歷:<input type="file" name="Resume" /></label>      <br />      <label for="profile">個人簡介:</label>      <br />      <textarea id="profile" class="profile" name="personal-profile" placeholder="請自我介紹，最少30字以上"></textarea>      <br />      <input type="submit" value="送出" />    </fieldset></form>]]></content>
       
       
       <categories>

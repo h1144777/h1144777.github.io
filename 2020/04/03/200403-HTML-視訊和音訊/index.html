@@ -30,7 +30,7 @@
 <meta property="og:description" content="這篇文章內會有一些關於將影片與音訊加入到網頁內的方法。 可以使用HTML5中的&lt;video&gt;標籤，可以更簡單方便的將影片或音訊放到網站之中，要注意檔案格式，目前瀏覽器支援度最高的影片格式為MP4，音訊檔為mp3。也可使用另一種方法，利用現在的線上影音平台(例如Youtube)，將影片上傳到影音平台後再崁入到網頁中，以下會有關於兩種做法的說明。">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-04-03T06:49:32.000Z">
-<meta property="article:modified_time" content="2020-04-03T09:18:37.562Z">
+<meta property="article:modified_time" content="2020-04-05T08:03:46.293Z">
 <meta property="article:author" content="祥祥">
 <meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary">
@@ -190,10 +190,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2020-04-03 14:49:32 / 修改時間：17:18:37" itemprop="dateCreated datePublished" datetime="2020-04-03T14:49:32+08:00">2020-04-03</time>
+              <time title="創建時間：2020-04-03 14:49:32" itemprop="dateCreated datePublished" datetime="2020-04-03T14:49:32+08:00">2020-04-03</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-04-05 16:03:46" itemprop="dateModified" datetime="2020-04-05T16:03:46+08:00">2020-04-05</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -288,14 +294,39 @@
 <h2 id="崁入外部影音檔"><a href="#崁入外部影音檔" class="headerlink" title="崁入外部影音檔"></a>崁入外部影音檔</h2><p>現在網路上有許多影音平台提供崁入影片功能，使用崁入影片可以有效降低伺服器的負荷量，減少影片對網頁讀取效率的影響，這裡可以使用之前學習過的<code>&lt;iframe&gt;</code>標籤，以下用Youtube為例:</p>
 <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe </span><br><span class="line"><span class="attribute">width</span>=<span class="string">"1195"</span> </span><br><span class="line"><span class="attribute">height</span>=<span class="string">"672"</span> </span><br><span class="line"><span class="attribute">src</span>=<span class="string">"https://www.youtube.com/embed/COLxKY5y-T0"</span> </span><br><span class="line"><span class="attribute">frameborder</span>=<span class="string">"0"</span> </span><br><span class="line"><span class="attribute">allow</span>=<span class="string">"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"</span> </span><br><span class="line">allowfullscreen&gt;</span><br><span class="line">&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
 <p>會得到以下結果:</p>
-<iframe 
-width="1195" 
-height="672" 
-src="https://www.youtube.com/embed/COLxKY5y-T0" 
-frameborder="0" 
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen>
-</iframe>
+<style>
+    .main {
+        margin: 100px auto;
+        max-width: 60%;
+    }
+
+    .videowrap {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+    }
+
+    .videowrap iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<body>
+    <div class="main">
+
+<pre><code>    &lt;div class=&quot;videowrap&quot;&gt;
+        &lt;iframe width=&quot;1195&quot; height=&quot;672&quot; src=&quot;https://www.youtube.com/embed/COLxKY5y-T0&quot; frameborder=&quot;0&quot;
+            allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;
+        &lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;</code></pre></body>
+
 
 
 <h2 id="參考來源"><a href="#參考來源" class="headerlink" title="參考來源:"></a>參考來源:</h2><p>書籍:HTML&amp;CSS 網站設計建置優化之道</p>

@@ -22,20 +22,40 @@
     var CONFIG = {"hostname":"h1144777.github.io","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="參考網站: 1. 函式的綁定物件  this 基礎     2. JavaScript 中的 function constructor 和關鍵字 new">
+  <meta name="description" content="在這篇文章中，會說明分支(branch)在SourceTree內的用法，分支是在版本控制中很重要的一環，尤其多人開發，或是需要加入新功能等等，也可以用來回溯之前的版本。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="200205-學習紀錄 函式的綁定物件this基礎">
-<meta property="og:url" content="https://h1144777.github.io/2020/02/05/200205-%E5%AD%B8%E7%BF%92%E7%B4%80%E9%8C%84%20%E5%87%BD%E5%BC%8F%E7%9A%84%E7%B6%81%E5%AE%9A%E7%89%A9%E4%BB%B6this%E5%9F%BA%E7%A4%8E/index.html">
+<meta property="og:title" content="200409-SourceTree-Git-版本控制-分支">
+<meta property="og:url" content="https://h1144777.github.io/2020/04/09/200409-SourceTree-Git-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-%E5%88%86%E6%94%AF/index.html">
 <meta property="og:site_name" content="h1144777學習日誌">
-<meta property="og:description" content="參考網站: 1. 函式的綁定物件  this 基礎     2. JavaScript 中的 function constructor 和關鍵字 new">
+<meta property="og:description" content="在這篇文章中，會說明分支(branch)在SourceTree內的用法，分支是在版本控制中很重要的一環，尤其多人開發，或是需要加入新功能等等，也可以用來回溯之前的版本。">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2020-02-05T15:32:53.000Z">
-<meta property="article:modified_time" content="2020-03-03T15:22:36.673Z">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/001.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/002.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/003.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/004.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/005.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/006.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/007.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/008.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/009.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/011.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/012.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/013.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/014.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/015.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/016.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/017.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/018.png">
+<meta property="og:image" content="https://h1144777.github.io/images/sourcetreebranch/019.png">
+<meta property="article:published_time" content="2020-04-09T15:18:08.000Z">
+<meta property="article:modified_time" content="2020-04-12T11:47:24.905Z">
 <meta property="article:author" content="祥祥">
-<meta property="article:tag" content="Javascript">
+<meta property="article:tag" content="git">
+<meta property="article:tag" content="版本控制">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://h1144777.github.io/images/sourcetreebranch/001.png">
 
-<link rel="canonical" href="https://h1144777.github.io/2020/02/05/200205-%E5%AD%B8%E7%BF%92%E7%B4%80%E9%8C%84%20%E5%87%BD%E5%BC%8F%E7%9A%84%E7%B6%81%E5%AE%9A%E7%89%A9%E4%BB%B6this%E5%9F%BA%E7%A4%8E/">
+<link rel="canonical" href="https://h1144777.github.io/2020/04/09/200409-SourceTree-Git-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-%E5%88%86%E6%94%AF/">
 
 
 <script id="page-configurations">
@@ -47,7 +67,7 @@
   };
 </script>
 
-  <title>200205-學習紀錄 函式的綁定物件this基礎 | h1144777學習日誌</title>
+  <title>200409-SourceTree-Git-版本控制-分支 | h1144777學習日誌</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158636214-1"></script>
     <script>
@@ -168,7 +188,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://h1144777.github.io/2020/02/05/200205-%E5%AD%B8%E7%BF%92%E7%B4%80%E9%8C%84%20%E5%87%BD%E5%BC%8F%E7%9A%84%E7%B6%81%E5%AE%9A%E7%89%A9%E4%BB%B6this%E5%9F%BA%E7%A4%8E/">
+    <link itemprop="mainEntityOfPage" href="https://h1144777.github.io/2020/04/09/200409-SourceTree-Git-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-%E5%88%86%E6%94%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head.png">
@@ -181,7 +201,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          200205-學習紀錄 函式的綁定物件this基礎
+          200409-SourceTree-Git-版本控制-分支
         </h1>
 
         <div class="post-meta">
@@ -191,14 +211,14 @@
               </span>
               <span class="post-meta-item-text">發表於</span>
 
-              <time title="創建時間：2020-02-05 23:32:53" itemprop="dateCreated datePublished" datetime="2020-02-05T23:32:53+08:00">2020-02-05</time>
+              <time title="創建時間：2020-04-09 23:18:08" itemprop="dateCreated datePublished" datetime="2020-04-09T23:18:08+08:00">2020-04-09</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-03-03 23:22:36" itemprop="dateModified" datetime="2020-03-03T23:22:36+08:00">2020-03-03</time>
+                <time title="修改時間：2020-04-12 19:47:24" itemprop="dateModified" datetime="2020-04-12T19:47:24+08:00">2020-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -228,8 +248,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2020/02/05/200205-%E5%AD%B8%E7%BF%92%E7%B4%80%E9%8C%84%20%E5%87%BD%E5%BC%8F%E7%9A%84%E7%B6%81%E5%AE%9A%E7%89%A9%E4%BB%B6this%E5%9F%BA%E7%A4%8E/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/02/05/200205-學習紀錄 函式的綁定物件this基礎/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/04/09/200409-SourceTree-Git-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-%E5%88%86%E6%94%AF/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/04/09/200409-SourceTree-Git-版本控制-分支/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -244,24 +264,64 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="參考網站"><a href="#參考網站" class="headerlink" title="參考網站:"></a>參考網站:</h2><a href="https://www.youtube.com/watch?v=5Vi5idUkuyA&list=PL-g0fdC5RMbpz9X__H5ycq1XcXxhfb5rk&index=14" target="_blank" rel="noopener">
-1. 函式的綁定物件  this 基礎</a>
-
-<br/>
-
-<a href="https://pjchender.blogspot.com/2016/06/javascriptfunction-constructornew.html" target="_blank" rel="noopener">
-2. JavaScript 中的 function constructor 和關鍵字 new</a>
-
+        <p>在這篇文章中，會說明分支(branch)在SourceTree內的用法，分支是在版本控制中很重要的一環，尤其多人開發，或是需要加入新功能等等，也可以用來回溯之前的版本。</p>
 <a id="more"></a>
 
-<br/>
-<br/>
-<br/>
-<br/>
-this 代表函式的"綁定物件,通常在函式中使用
-    不同的程式碼脈絡下,綁定物件代表不同的東西
+<h2 id="建立新分支"><a href="#建立新分支" class="headerlink" title="建立新分支"></a>建立新分支</h2><p>要建立新分支 我們可以直接點選介面上的點選介面上的Branch，輸入分支名稱後點選創建分支，即可建立新分支。</p>
+<p>1<br><img src="/images/sourcetreebranch/001.png" width="1180" /></p>
+<p>2<br><img src="/images/sourcetreebranch/002.png" width="1180" /></p>
+<p>3<br><img src="/images/sourcetreebranch/003.png" width="1180" /></p>
+<h2 id="切換分支"><a href="#切換分支" class="headerlink" title="切換分支"></a>切換分支</h2><p>在SourceTree內切換分支的方法非常簡單，只要將滑鼠指標移到想要切換到的分支上快速點左鍵兩下，或是在該分支上點選右鍵選擇Checkout就可以快速切換。</p>
+<img src="/images/sourcetreebranch/004.png" width="1180" />
 
-<h2 id="情況一-獨立的函式"><a href="#情況一-獨立的函式" class="headerlink" title="情況一:獨立的函式"></a>情況一:獨立的函式</h2><pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">//this就是 window 物件</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.innerWidth); <span class="comment">//印出視窗的寬度</span></span><br><span class="line">&#125;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure></code></pre><h2 id="情況二-物件的方法"><a href="#情況二-物件的方法" class="headerlink" title="情況二:物件的方法"></a>情況二:物件的方法</h2><pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj=&#123;</span><br><span class="line">    x:<span class="number">3</span>,</span><br><span class="line">    test:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">//this就是方法所屬的物件本身</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.x);<span class="comment">//印出物件的屬性 x</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">obj.test();</span><br></pre></td></tr></table></figure></code></pre><h2 id="情況三-事件處理函式"><a href="#情況三-事件處理函式" class="headerlink" title="情況三:事件處理函式"></a>情況三:事件處理函式</h2><pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);  </span><br><span class="line">    <span class="comment">/*this 就是觸發事件的對象物件 </span></span><br><span class="line"><span class="comment">    例如在按鈕上註冊click物件 this就是代表那個按鈕 */</span></span><br><span class="line">    <span class="keyword">this</span>.body.innerHTML=<span class="string">"已點擊"</span>;  <span class="comment">//舉例用法 點擊網頁會跳出"已點擊" 文字</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></code></pre><h2 id="情況四-建構函式"><a href="#情況四-建構函式" class="headerlink" title="情況四:建構函式"></a>情況四:建構函式</h2><pre><code><figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">point</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>); </span><br><span class="line">    <span class="comment">/*this就是瀏覽器自動幫我們新建立好的空白物件 顯示為point&#123;&#125;*/</span></span><br><span class="line">    <span class="keyword">this</span>.x=<span class="number">3</span>;</span><br><span class="line">    <span class="keyword">this</span>.y=<span class="number">4</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> p1=<span class="keyword">new</span> <span class="built_in">point</span>();</span><br><span class="line"><span class="built_in">console</span>.log(p1); <span class="comment">//結果為point&#123;x:3,y:4&#125;</span></span><br></pre></td></tr></table></figure></code></pre>
+<h2 id="刪除分支"><a href="#刪除分支" class="headerlink" title="刪除分支"></a>刪除分支</h2><p>刪除分支有兩種方式:</p>
+<p>第一種直接到該分支點選右鍵，選擇Delete。</p>
+<img src="/images/sourcetreebranch/005.png" width="1180" />
+
+<p>第二種則是點選Branch，再點選上方的 Delete Branch，下方清單的分支可以多選後刪除(有顯示Origin的則是在github伺服器上的分支)</p>
+<img src="/images/sourcetreebranch/006.png" width="1180" />
+
+<h2 id="上傳分支"><a href="#上傳分支" class="headerlink" title="上傳分支"></a>上傳分支</h2><p>首先點選Push</p>
+<img src="/images/sourcetreebranch/007.png" width="1180" />
+
+<p>然後勾選要上傳的分支，如果伺服器上還沒有這個分支，勾選後Remote Branch會自己顯示新分支的名稱，此時只要Push上去就完成了。</p>
+<img src="/images/sourcetreebranch/008.png" width="1180" />
+
+<h2 id="分支版本"><a href="#分支版本" class="headerlink" title="分支版本"></a>分支版本</h2><p>分支都會有一個主要的版本，有再其他分支更改過內容可使用commit，輸入說明後提交再push上去。<br>因為修改或是寫的內容不同，分支會出現分歧。<br>此時也因為本機的版本比伺服器上還新，所以在分支上面都會出現提示</p>
+<img src="/images/sourcetreebranch/009.png" width="1180" />
+
+<h2 id="合併分支"><a href="#合併分支" class="headerlink" title="合併分支"></a>合併分支</h2><p>在兩人或多人協同開發專案時，可以將分開寫的程式碼在SourceTree上做合併分支</p>
+<p>這是分支master的程式碼</p>
+<img src="/images/sourcetreebranch/011.png" width="650" />
+
+<p>這是分支001的程式碼</p>
+<img src="/images/sourcetreebranch/012.png" width="650" />
+
+
+<p>合併分支點選Merge後會出現以下視窗，此時我們的分支為001，要將master與001合併，所以我們選擇master分支後點擊OK</p>
+<img src="/images/sourcetreebranch/013.png" width="1180" />
+
+<p>因為出現程式碼不同的狀況，所以出現合併衝突，會跳出警告視窗Merge conflict<br>關閉警告視窗後我們可以在底下看到衝突的部分</p>
+<img src="/images/sourcetreebranch/014.png" width="1180" />
+
+<p>因為筆者使用的是vs code，所以此時可以開啟這個檔案查看衝突部分<br>開啟後會顯示如下圖</p>
+<img src="/images/sourcetreebranch/015.png" width="1180" />
+
+<p>此時我們可以點選比較變更來看看兩方的程式碼差異</p>
+<img src="/images/sourcetreebranch/016.png" width="1180" />
+
+<p>因為一方是空白行，所以可以選擇使用接受兩者變更，點擊後程式碼會合併成下圖</p>
+<img src="/images/sourcetreebranch/017.png" width="1180" />
+
+<p>合併完成後回到SourceTree，將在Unstaged files的檔案拖曳到staged files，此時的說明欄內會有剛剛合併分支的說明，可以修改說明也可以直接commit。</p>
+<img src="/images/sourcetreebranch/018.png" width="1180" />
+
+<p>回到分支頁面上，可以看到001分支已經跟master分支合併了，此時就可以將這個版本Push上github。</p>
+<p>*要注意的是現在我們的分支都是在001，所以001分支已經跟master分支的程式碼合併，但是切換到master分支後顯示的為未合併的前一版本喔。</p>
+<img src="/images/sourcetreebranch/019.png" width="1180" />
+
+<h2 id="參考來源"><a href="#參考來源" class="headerlink" title="參考來源:"></a>參考來源:</h2><p><a href="https://hackmd.io/@09oU3M6LTU-7M6MkSqRj1A/Bymbf3y2?type=view" target="_blank" rel="noopener">一步一步教你用 GitHub + SourceTree 做版本控制</a><br><a href="https://ithelp.ithome.com.tw/articles/10138437" target="_blank" rel="noopener">30 天精通 Git 版本控管 (17)：關於合併的基本觀念與使用方式</a><br><a href="https://medium.com/samumu-clan/%E7%94%A8-sourcetree-%E5%AF%A6%E7%8F%BE%E5%9F%BA%E7%A4%8E%E7%89%88%E6%9C%AC%E7%AE%A1%E6%8E%A7-b007254e95c5" target="_blank" rel="noopener">用 Sourcetree 實現基礎版本管控</a><br><a href="https://w3c.hexschool.com/git/921e90ff" target="_blank" rel="noopener">本地分支衝突</a><br><a href="https://gitbook.tw/chapters/branch/fix-conflict.html" target="_blank" rel="noopener">合併發生衝突了，怎麼辦？</a></p>
+
     </div>
 
     
@@ -270,7 +330,8 @@ this 代表函式的"綁定物件,通常在函式中使用
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Javascript/" rel="tag"># Javascript</a>
+              <a href="/tags/git/" rel="tag"># git</a>
+              <a href="/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" rel="tag"># 版本控制</a>
           </div>
 
         
@@ -278,11 +339,11 @@ this 代表函式的"綁定物件,通常在函式中使用
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/02/09/200208-blog%E4%B8%BB%E9%A1%8C%E8%88%87%E8%A8%AD%E5%AE%9A/" rel="next" title="200208-blog主題與設定">
-      200208-blog主題與設定 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/04/08/200408-SourceTree-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-%E5%B0%8E%E5%85%A5%E5%B0%88%E6%A1%88/" rel="prev" title="200408-SourceTree-Git-版本控制-導入專案">
+      <i class="fa fa-chevron-left"></i> 200408-SourceTree-Git-版本控制-導入專案
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -349,7 +410,7 @@ this 代表函式的"綁定物件,通常在函式中使用
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#參考網站"><span class="nav-number">1.</span> <span class="nav-text">參考網站:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#情況一-獨立的函式"><span class="nav-number">2.</span> <span class="nav-text">情況一:獨立的函式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#情況二-物件的方法"><span class="nav-number">3.</span> <span class="nav-text">情況二:物件的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#情況三-事件處理函式"><span class="nav-number">4.</span> <span class="nav-text">情況三:事件處理函式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#情況四-建構函式"><span class="nav-number">5.</span> <span class="nav-text">情況四:建構函式</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#建立新分支"><span class="nav-number">1.</span> <span class="nav-text">建立新分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切換分支"><span class="nav-number">2.</span> <span class="nav-text">切換分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#刪除分支"><span class="nav-number">3.</span> <span class="nav-text">刪除分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上傳分支"><span class="nav-number">4.</span> <span class="nav-text">上傳分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支版本"><span class="nav-number">5.</span> <span class="nav-text">分支版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合併分支"><span class="nav-number">6.</span> <span class="nav-text">合併分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#參考來源"><span class="nav-number">7.</span> <span class="nav-text">參考來源:</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -509,9 +570,9 @@ this 代表函式的"綁定物件,通常在函式中使用
 <script>
   var disqus_config = function() {
       this.language = "zh_TW";;
-    this.page.url = "https://h1144777.github.io/2020/02/05/200205-%E5%AD%B8%E7%BF%92%E7%B4%80%E9%8C%84%20%E5%87%BD%E5%BC%8F%E7%9A%84%E7%B6%81%E5%AE%9A%E7%89%A9%E4%BB%B6this%E5%9F%BA%E7%A4%8E/";
-    this.page.identifier = "2020/02/05/200205-學習紀錄 函式的綁定物件this基礎/";
-    this.page.title = "200205-學習紀錄 函式的綁定物件this基礎";
+    this.page.url = "https://h1144777.github.io/2020/04/09/200409-SourceTree-Git-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-%E5%88%86%E6%94%AF/";
+    this.page.identifier = "2020/04/09/200409-SourceTree-Git-版本控制-分支/";
+    this.page.title = "200409-SourceTree-Git-版本控制-分支";
   
   
     

@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>200425-CSS複習-簡介</title>
+      <link href="/2020/04/25/200425-CSS%E8%A4%87%E7%BF%92-%E7%B0%A1%E4%BB%8B/"/>
+      <url>/2020/04/25/200425-CSS%E8%A4%87%E7%BF%92-%E7%B0%A1%E4%BB%8B/</url>
+      
+        <content type="html"><![CDATA[<p>CSS是用來製作網頁樣式的一種語法，換句話說，<br>只要關於顯示在網頁上的樣式、背景、文字、排版等等，都是使用CSS語法去控制寫成。</p><p>學習CSS最重要的是要了解撰寫規則，並靈活運用CSS的多種屬性來達到想要在網頁呈現出來的效果。</p><a id="more"></a><p>我們可以想像在每個HTML元素中的內容都視為一個框，而CSS可以製作並控制個別的框以及框的內容，<br>將想要呈現的畫面顯示在網頁中。</p><h2 id="使用外部CSS"><a href="#使用外部CSS" class="headerlink" title="使用外部CSS"></a>使用外部CSS</h2><img src="/images/CSS簡介/out-css.png" />]]></content>
+      
+      
+      <categories>
+          
+          <category> 複習 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>200409-SourceTree-Git-版本控制-分支</title>
       <link href="/2020/04/09/200409-SourceTree-Git-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-%E5%88%86%E6%94%AF/"/>
       <url>/2020/04/09/200409-SourceTree-Git-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-%E5%88%86%E6%94%AF/</url>

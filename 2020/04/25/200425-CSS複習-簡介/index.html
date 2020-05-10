@@ -30,8 +30,9 @@
 <meta property="og:description" content="CSS是用來製作網頁樣式的一種語法，換句話說，只要關於顯示在網頁上的樣式、背景、文字、排版等等，都是使用CSS語法去控制寫成。 學習CSS最重要的是要了解撰寫規則，並靈活運用CSS的多種屬性來達到想要在網頁呈現出來的效果。">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://h1144777.github.io/images/CSS%E7%B0%A1%E4%BB%8B/out-css.png">
+<meta property="og:image" content="https://h1144777.github.io/images/CSS%E7%B0%A1%E4%BB%8B/in-css.png">
 <meta property="article:published_time" content="2020-04-25T14:20:18.000Z">
-<meta property="article:modified_time" content="2020-04-25T14:56:21.524Z">
+<meta property="article:modified_time" content="2020-05-08T17:08:45.126Z">
 <meta property="article:author" content="祥祥">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
@@ -192,10 +193,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2020-04-25 22:20:18 / 修改時間：22:56:21" itemprop="dateCreated datePublished" datetime="2020-04-25T22:20:18+08:00">2020-04-25</time>
+              <time title="創建時間：2020-04-25 22:20:18" itemprop="dateCreated datePublished" datetime="2020-04-25T22:20:18+08:00">2020-04-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-05-09 01:08:45" itemprop="dateModified" datetime="2020-05-09T01:08:45+08:00">2020-05-09</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -245,7 +252,102 @@
 <a id="more"></a>
 
 <p>我們可以想像在每個HTML元素中的內容都視為一個框，而CSS可以製作並控制個別的框以及框的內容，<br>將想要呈現的畫面顯示在網頁中。</p>
-<h2 id="使用外部CSS"><a href="#使用外部CSS" class="headerlink" title="使用外部CSS"></a>使用外部CSS</h2><img src="/images/CSS簡介/out-css.png" />
+<h2 id="使用外部CSS"><a href="#使用外部CSS" class="headerlink" title="使用外部CSS"></a>使用外部CSS</h2><p>下方為使用外部CSS的範例</p>
+<img src="/images/CSS簡介/out-css.png" />
+
+<p><code>&lt;link&gt;</code>這個標籤放在<code>&lt;head&gt;</code>標籤之中，會用來放置CSS的外部檔案位置，而裡面會有以下3種屬性:</p>
+<p>href:這個屬性指定css檔的路徑，通常會建立一個css或styles資料夾，將css檔放在裡面。</p>
+<p>type:這個屬性用來設定要連結的檔案類型，我們現在是用來連結css檔，所以他的值為text/css。</p>
+<p>rel:這個屬性表示HTML與連結到的檔案關係，在連結CSS檔時的值為stylesheet。</p>
+<h2 id="使用內部CSS"><a href="#使用內部CSS" class="headerlink" title="使用內部CSS"></a>使用內部CSS</h2><p>也可以直接將CSS加到HTML頁面中，作法如下圖</p>
+<img src="/images/CSS簡介/in-css.png" />
+
+<p><code>&lt;style&gt;</code>標籤會再加上type屬性來表示為CSS，這時type的值為text/css。</p>
+<p>通常會使用外部CSS來呈現，因為如果為超過一頁的網站，這樣可以使所有頁面指定同個CSS檔案，而不需要重複寫在各個HTML中。<br>也可以將內容與外觀分開，只要修改CSS檔，就可以改變所有網頁上的樣式，不用再一個一個做修改。</p>
+<h2 id="CSS選擇器"><a href="#CSS選擇器" class="headerlink" title="CSS選擇器"></a>CSS選擇器</h2><p>CSS選取器是用來將CSS樣式套用在HTML中指定的標籤，需要注意的是CSS選擇器有大小寫區分，以下為常用的選擇器</p>
+<table style="font-size:15px;">
+        <thead>
+            <tr>
+                <th>選擇器</th>
+                <th>用途</th>
+                <th>範例</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr> </tr>
+            <tr>
+                <td>全域選擇器</td>
+                <td>套用在此頁面的所有標籤。</td>
+                <td>*{}</td>
+            </tr>
+            <tr>
+                <td>類型選擇器</td>
+                <td>套用到符合的標籤名稱。</td>
+                <td>
+                    h1,h2{}
+                    <br />
+                    (套用到頁面上&lt;h1&gt;、&lt;h2&gt;標籤)
+                </td>
+            </tr>
+            <tr>
+                <td>class選擇器</td>
+                <td>套用到有指定class屬性，並符合css上指定值的標籤。</td>
+                <td>
+                    .test{}  (套用到頁面上所有class值為test的標籤)
+                    <br />
+                    p.test{} (只套用頁面上class值為test的&lt;p&gt;標籤)
+                </td>
+            </tr>
+            <tr>
+                <td>id選擇器</td>
+                <td>
+                套用到id屬性與css的#後面值相同的標籤。
+                <br />
+                需要注意的是id選擇器在一頁html中只能出現一次，要謹慎使用。
+                </td>
+                <td>#idname{} (套用到id值為idname的標籤)</td>
+            </tr>
+            <tr>
+                <td>子選擇器</td>
+                <td>套用到指定標籤的直系子標籤。</td>
+                <td>footer&gt;p{}  (套用到&lt;footer&gt;標籤內的&lt;p&gt;標籤)</td>
+            </tr>
+            <tr>
+                <td>後代選擇器</td>
+                <td>套用到指定標籤的後代標籤。</td>
+                <td>p a{} (套用到任何位在&lt;p&gt;標籤內的&lt;a&gt;標籤，不限於子標籤或孫標籤)</td>
+            </tr>
+            <tr>
+                <td>同層相鄰選擇器</td>
+                <td>具有同樣父類別的兩個標籤，
+                <br />
+                以「＋」作為連結，允許選擇特定標籤之後的第一個特定標籤。</td>
+                <td>h1+p{} (套用&lt;h1&gt;之後的第一個&lt;p&gt;標籤，但不包含其他&lt;p&gt;標籤)</td>
+            </tr>
+            <tr>
+                <td>同層全體選擇器</td>
+                <td>具有同樣父類別的兩個標籤以「~」作為連結，
+                <br />
+                允許選擇特定標籤後的全部特定標籤。</td>
+                <td>h1~p{} (套用到在&lt;h1&gt;之後所有同層的&lt;p&gt;標籤)</td>
+            </tr>
+        </tbody>
+    </table>
+
+<h2 id="CSS階層"><a href="#CSS階層" class="headerlink" title="CSS階層"></a>CSS階層</h2><p>如果有兩組CSS同時套用到同一個標籤上，會有以下幾種情形</p>
+<ol>
+<li>後者優先:如果兩個選擇器相同，後者會優先於前者。</li>
+<li>指定程度:選擇器的指定性越高，更具指定性，會優先於較一般的選擇器，例如:<br><code>h1{}</code>比<code>*{}</code>更具指定性<br><code>p b{}</code>比<code>p{}</code>更具指定性<br><code>p#idname{}</code>比<code>p{}</code>更具指定性</li>
+<li>可以在任何屬性值後面加上!important，表示此規則比其他套用到相同標籤的規則來得重要。</li>
+</ol>
+<h2 id="繼承"><a href="#繼承" class="headerlink" title="繼承"></a>繼承</h2><p>指定在父標籤的屬性，有分為有繼承與無繼承性的屬性，有繼承性的例如font-family、font-size 等等，無繼承性的例如有 display、margin、padding，可參考來源網址內的<a href="https://www.itread01.com/p/631922.html" target="_blank" rel="noopener">CSS可繼承屬性和不可繼承屬性</a>。</p>
+<p>強制繼承:可以使用inherit值強制繼承父標籤的屬性值，範例如下:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">font-family</span>: Arial, sans-serif;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.page</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#665544</span>;</span><br><span class="line">    <span class="attribute">padding</span>: inherit;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="參考來源"><a href="#參考來源" class="headerlink" title="參考來源"></a>參考來源</h2><p>書籍:HTML&amp;CSS 網站設計建置優化之道</p>
+<p><a href="https://chocochocoduck.tumblr.com/post/92811146763/css%E5%90%8C%E5%B1%A4%E7%9B%B8%E9%84%B0%E9%81%B8%E6%93%87%E5%99%A8%E5%90%8C%E5%B1%A4%E5%85%A8%E9%AB%94%E9%81%B8%E6%93%87%E5%99%A8" target="_blank" rel="noopener">[CSS]同層相鄰選擇器＆同層全體選擇器</a></p>
+<p><a href="https://medium.com/@small2883/css%E5%A6%82%E4%BD%95%E8%A6%8F%E7%AF%84%E9%9A%8E%E5%B1%A4-84e7f52b82ca" target="_blank" rel="noopener">CSS如何規範階層</a></p>
+<p><a href="https://www.itread01.com/p/631922.html" target="_blank" rel="noopener">CSS可繼承屬性和不可繼承屬性</a></p>
 
     </div>
 
@@ -334,7 +436,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用外部CSS"><span class="nav-number">1.</span> <span class="nav-text">使用外部CSS</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用外部CSS"><span class="nav-number">1.</span> <span class="nav-text">使用外部CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用內部CSS"><span class="nav-number">2.</span> <span class="nav-text">使用內部CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS選擇器"><span class="nav-number">3.</span> <span class="nav-text">CSS選擇器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS階層"><span class="nav-number">4.</span> <span class="nav-text">CSS階層</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#繼承"><span class="nav-number">5.</span> <span class="nav-text">繼承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#參考來源"><span class="nav-number">6.</span> <span class="nav-text">參考來源</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

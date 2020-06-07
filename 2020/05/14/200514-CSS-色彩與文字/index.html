@@ -29,11 +29,13 @@
 <meta property="og:site_name" content="h1144777學習日誌">
 <meta property="og:description" content="在網頁的呈現中，色彩及文字是不可或缺的，在這篇文章中會介紹使用CSS來處理網頁上的色彩及文字。">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://h1144777.github.io/images/first.jpg">
 <meta property="article:published_time" content="2020-05-14T15:30:16.000Z">
-<meta property="article:modified_time" content="2020-05-18T16:22:38.945Z">
+<meta property="article:modified_time" content="2020-06-07T16:07:03.046Z">
 <meta property="article:author" content="祥祥">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://h1144777.github.io/images/first.jpg">
 
 <link rel="canonical" href="https://h1144777.github.io/2020/05/14/200514-CSS-%E8%89%B2%E5%BD%A9%E8%88%87%E6%96%87%E5%AD%97/">
 
@@ -198,7 +200,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-05-19 00:22:38" itemprop="dateModified" datetime="2020-05-19T00:22:38+08:00">2020-05-19</time>
+                <time title="修改時間：2020-06-08 00:07:03" itemprop="dateModified" datetime="2020-06-08T00:07:03+08:00">2020-06-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -206,8 +208,8 @@
               </span>
               <span class="post-meta-item-text">分類於</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%A4%87%E7%BF%92/" itemprop="url" rel="index">
-                    <span itemprop="name">複習</span>
+                  <a href="/categories/%E5%AD%B8%E7%BF%92%E7%B4%80%E9%8C%84/" itemprop="url" rel="index">
+                    <span itemprop="name">學習紀錄</span>
                   </a>
                 </span>
             </span>
@@ -268,11 +270,10 @@
 <p>font-size:此屬性用來指定字體大小，常用的單位有:px , % , em 等等。</p>
 <p>@font-face:這個屬性可以指定連結到字型檔的路徑，連結到此網頁的用戶電腦內若沒有此字型，就會進行下載並顯示在頁面。<br>但要注意的是這個方式允許字型下載到用戶電腦，所以關於字體授權的部分要特別小心。<br>關於font-face用法範例如下:</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@font-face</span>&#123;</span><br><span class="line">   <span class="attribute">font-family</span>: test1;</span><br><span class="line">   <span class="attribute">src</span>: <span class="built_in">url</span>(fonts/test1.ttf) <span class="built_in">format</span>(<span class="string">"opentype"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<pre><code>font-family:這個屬性用來指定字型名稱，在接下來的CSS中可以使用這個屬性內的名稱作為font-family的值。
-
-src:這個屬性為字型的路徑。
-
-format:這個屬性用來指定字型格式，關於字型有多種格式，可參考以下表格</code></pre><table>
+<p>font-family:這個屬性用來指定字型名稱，在接下來的CSS中可以使用這個屬性內的名稱作為font-family的值。</p>
+<p>src:這個屬性為字型的路徑。</p>
+<p>format:這個屬性用來指定字型格式，關於字型有多種格式，可參考以下表格</p>
+<table>
   <tr>
     <th>副檔名</th>
     <th>format指定方式</th>
@@ -295,9 +296,37 @@ format:這個屬性用來指定字型格式，關於字型有多種格式，可�
     </tr>
 </table> 
 
-
+<p>font-weight:指定字體粗細，可用值有normal、 bold、 100、 200、 300、 400、 500、 600、 700、 800、 900，預設為 normal。</p>
+<p>font-style:用來製作斜體字，可用值有normal(正常樣式)、italic(斜體)、oblique(傾斜體)。</p>
+<p>text-transform:可以改變文字大小寫，可用值有uppercase(大寫)、lowercase(小寫)、capitalize(每個單字的第一個字母大寫)。</p>
+<p>text-decoration:可以設計或控制網頁上文字的修飾線條，常用值有none(預設值，無額外文字特效)、underline(底線特效)、overline(上方線特效)、line-through(刪除線特效)。none屬性也常用在移除瀏覽器連結文字的底線上。</p>
+<p>line-height:可以調整文字的行距。</p>
+<p>letter-spacing:調整字距，這個屬性調整的字距為字元與字元間的距離。</p>
+<p>word-spacing:調整字距，與letter-spacing不同的地方在於這個屬性調整的字距為單字與單字間的距離，若用在中文上，為詞與詞之間的間距，以空格視為單字的分界，例如”早安你好”會視為一個詞，”早安 你好”則會被視為兩組詞。</p>
+<p>text-align:可以控制文字的對齊方式，可用值為left(靠左對齊)、right(靠右對齊)、center(製中對齊)、justify(除了最後一行外，每一行都佔據容器方框的整個寬度)。</p>
+<p>vertical-align:用來調整網頁中圖片或文字在表格內垂直方向的對齊方式，這個屬性比較常用在行內元素上，可以接受的值有baseline(預設值，在該行的基礎線上)，sub(垂直對齊該行文本的下標)、super(垂直對齊該行文本的上標)、top(垂直對齊該行標籤的最高位置)、text-top(垂直對齊該行文字的最高位置)、middle(垂直對齊該行文字的置中位置)、bottom(垂直對齊該行標籤的最低位置)、text-bottom(垂直對齊該行文字的最低位置)，也可以以百分比或像素作為單位。</p>
+<p>text-indent:文字縮排，可用來縮排標籤內的第一行文字，可以接受負數值。</p>
+<p>text-shadow:這個屬性為CSS3推出的功能，可以用來製造陰影，用法如下</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text-shadow: <span class="number">1</span>px <span class="number">1</span>px <span class="number">3</span>px #<span class="number">666666</span>;</span><br></pre></td></tr></table></figure>
+<p>以上分別代表為X軸方向陰影、Y軸方向陰影、模糊範圍、陰影顏色，模糊範圍為選填項目。</p>
+<h2 id="偽元素-關於文字處理部分"><a href="#偽元素-關於文字處理部分" class="headerlink" title="偽元素(關於文字處理部分)"></a>偽元素(關於文字處理部分)</h2><p><code>:first-letter</code>:可以指定不同的值給標籤內文字的第一個字母。</p>
+<p><code>:first-line</code>:可以指定不同值給標籤內文章的第一行。</p>
+<p>偽元素用法是放在選擇器結尾，並且給予CSS語法，範例如下:</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">CSS部分</span><br><span class="line"></span><br><span class="line">p.<span class="built_in">int</span>ro:first-letter&#123;</span><br><span class="line">   font-size: <span class="number">200</span>% ;</span><br><span class="line">&#125;</span><br><span class="line">p.<span class="built_in">int</span>ro:first-line&#123;</span><br><span class="line">   font-weight: bold ;</span><br><span class="line">&#125;</span><br><span class="line">---------------------------------------------</span><br><span class="line">內容</span><br><span class="line"></span><br><span class="line">&lt;p <span class="keyword">class</span>="<span class="symbol">intro</span>" &gt;</span><br><span class="line"><span class="symbol">CSS</span>是用來製作網頁樣式的一種語法。</span><br><span class="line">換句話說，只要關於顯示在網頁上的樣式、背景、文字、排版等等，都是使用<span class="symbol">CSS</span>語法去控制寫成。</span><br><span class="line"></span><br><span class="line">學習<span class="symbol">CSS</span>最重要的是要了解撰寫規則，並靈活運用<span class="symbol">CSS</span>的多種屬性來達到想要在網頁呈現出來的效果。</span><br><span class="line"></span><br><span class="line">我們可以想像在每個<span class="symbol">HTML</span>元素中的內容都視為一個框，而<span class="symbol">CSS</span>可以製作並控制個別的框以及框的內容，</span><br><span class="line">將想要呈現的畫面顯示在網頁中。</span><br><span class="line">&lt;/<span class="symbol">p</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>效果如下:<br><img src="/images/first.jpg" /></p>
+<p>我們可以看到因為<code>p.intro:first-letter</code>內語法的關係，第一個單字較大，而<code>p.intro:first-line</code>內指定字體為粗體，所以範例第一行字體較粗。</p>
+<h2 id="虛擬類別-偽類別"><a href="#虛擬類別-偽類別" class="headerlink" title="虛擬類別(偽類別)"></a>虛擬類別(偽類別)</h2><h3 id="連結樣式"><a href="#連結樣式" class="headerlink" title="連結樣式:"></a>連結樣式:</h3><p>瀏覽器預設值下會用藍色和底線呈現出連結，當連結點選後顏色會改變，以下兩種虛擬類別(偽類別)可以設定已點擊和未點擊連結的樣式，常會用在控制連結顏色與底線。</p>
+<p><code>:link</code>:可以用來設定未點擊的連結樣式。</p>
+<p><code>:visited</code>:用來設定點擊後的樣式。</p>
+<h3 id="使用者的操作與回應"><a href="#使用者的操作與回應" class="headerlink" title="使用者的操作與回應"></a>使用者的操作與回應</h3><p><code>:hover</code>:這個偽類別使用在滑鼠指標等移動到一個標籤(元素)時的設定，需注意的是此用法不能用在觸控式裝置上，會無法判定。</p>
+<p><code>:active</code>:當該標籤被使用者啟動，例如點擊按鈕時即可觸發這個類別。</p>
+<p><code>:focus</code>:當聚焦時這個偽類別就會被套用，聚焦滑鼠指標移動到某個標籤準備要互動的狀態，舉例來說滑鼠指標移動到連結上，即為聚焦。</p>
 <h2 id="參考來源"><a href="#參考來源" class="headerlink" title="參考來源:"></a>參考來源:</h2><p>書籍:HTML&amp;CSS 網站設計建置優化之道</p>
 <p><a href="https://www.w3schools.com/colors/default.asp" target="_blank" rel="noopener">Colors Tutorial</a></p>
+<p><a href="https://blog.gtwang.org/web-development/css-font-face/" target="_blank" rel="noopener">CSS 網頁字型 @font-face 使用教學與範例</a></p>
+<p><a href="http://www.webtech.tw/info.php?tid=CSS_text-decoration_%E5%B1%AC%E6%80%A7" target="_blank" rel="noopener">CSS text-decoration 屬性</a></p>
+<p><a href="http://www.webtech.tw/info.php?tid=CSS_text-decoration_%E5%B1%AC%E6%80%A7" target="_blank" rel="noopener">CSS text-decoration 屬性</a></p>
+<p><a href="https://www.footmark.info/web-design/css/css-pseudo-class-selectors/" target="_blank" rel="noopener">CSS 虛擬 (偽) 類別選擇器 (Selector) 教學範例</a></p>
 
     </div>
 
@@ -386,7 +415,7 @@ format:這個屬性用來指定字型格式，關於字型有多種格式，可�
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#色彩"><span class="nav-number">1.</span> <span class="nav-text">色彩</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#色彩數值"><span class="nav-number">1.1.</span> <span class="nav-text">色彩數值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#色彩的功能屬性"><span class="nav-number">1.2.</span> <span class="nav-text">色彩的功能屬性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字"><span class="nav-number">2.</span> <span class="nav-text">文字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字型與字體"><span class="nav-number">2.1.</span> <span class="nav-text">字型與字體</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#參考來源"><span class="nav-number">3.</span> <span class="nav-text">參考來源:</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#色彩"><span class="nav-number">1.</span> <span class="nav-text">色彩</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#色彩數值"><span class="nav-number">1.1.</span> <span class="nav-text">色彩數值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#色彩的功能屬性"><span class="nav-number">1.2.</span> <span class="nav-text">色彩的功能屬性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字"><span class="nav-number">2.</span> <span class="nav-text">文字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字型與字體"><span class="nav-number">2.1.</span> <span class="nav-text">字型與字體</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#偽元素-關於文字處理部分"><span class="nav-number">3.</span> <span class="nav-text">偽元素(關於文字處理部分)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#虛擬類別-偽類別"><span class="nav-number">4.</span> <span class="nav-text">虛擬類別(偽類別)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#連結樣式"><span class="nav-number">4.1.</span> <span class="nav-text">連結樣式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用者的操作與回應"><span class="nav-number">4.2.</span> <span class="nav-text">使用者的操作與回應</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#參考來源"><span class="nav-number">5.</span> <span class="nav-text">參考來源:</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

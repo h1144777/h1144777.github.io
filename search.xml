@@ -4,20 +4,32 @@
   
     
     <entry>
-      <title>test測試</title>
-      <link href="/2020/05/10/test%E6%B8%AC%E8%A9%A6/"/>
-      <url>/2020/05/10/test%E6%B8%AC%E8%A9%A6/</url>
+      <title>200514-CSS-色彩與文字</title>
+      <link href="/2020/05/14/200514-CSS-%E8%89%B2%E5%BD%A9%E8%88%87%E6%96%87%E5%AD%97/"/>
+      <url>/2020/05/14/200514-CSS-%E8%89%B2%E5%BD%A9%E8%88%87%E6%96%87%E5%AD%97/</url>
       
-        <content type="html"><![CDATA[<p>001</p>]]></content>
+        <content type="html"><![CDATA[<p>在網頁的呈現中，色彩及文字是不可或缺的，在這篇文章中會介紹使用CSS來處理網頁上的色彩及文字。</p><a id="more"></a><h2 id="色彩"><a href="#色彩" class="headerlink" title="色彩"></a>色彩</h2><h3 id="色彩數值"><a href="#色彩數值" class="headerlink" title="色彩數值"></a>色彩數值</h3><p>關於指定顏色的方式可以有以下幾種:</p><ol><li><p>RGB或RGBA:<br>透過紅藍綠的組成來表現色彩。例如:rgb(100,100,90)<br>rgba則是多了一個不透明度(alpha)，這個屬性在CSS3之後加入，數值介於0.0~1.0。例如:rgba(100,100,90,0.5)</p></li><li><p>HEX碼:<br>以一個#字號為開頭，接著六位數的碼來組成的色碼。例如:#ee3e80</p></li><li><p>顏色名:<br>使用瀏覽器預設的顏色名稱。例如:DarkGray</p></li><li><p>HSL、HSLA屬性:<br>這個屬性為CSS3加入的顏色屬性，使用方法為hsl或hsla為開頭，緊接著是放在括弧內個別的數值，依序為色相、彩度、明度、不透明度(alpha，若需要此數值，開頭使用hsla，不需要則使用hsl)。例如:hsla(0,100%,100%,0.5)</p></li><li><p>opacity不透明度:<br>在CSS3中加入了這個屬性，作用是用來指定標籤及所有子標籤的不透明度，數值介於0.0~1.0之間，例如 opacity: 0.15 即為15%的不透明度。</p></li></ol><p>關於顏色數值的取得，可使用美工軟體(例如illustrator、CorelDraw、photoshop)檢視並取得，也可參考網路上眾多的選色器並獲取數值，例如<a href="https://www.w3schools.com/colors/default.asp" target="_blank" rel="noopener">Colors Tutorial</a>。</p><h3 id="色彩的功能屬性"><a href="#色彩的功能屬性" class="headerlink" title="色彩的功能屬性"></a>色彩的功能屬性</h3><p>color: 此屬性可指定標籤內部的文字顏色。</p><p>background-color:css將每個HTML標籤視為獨立的方框，這個屬性就是用來指定該方框的背景色。</p><h2 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h2><p>控制文字的外觀屬性有分為兩種，一種是直接影響字體以及字本身的外觀屬性，另一種則是不限字體，對文字都有相同效果的屬性，以下是關於CSS處理文字效果的介紹。</p><h3 id="字型與字體"><a href="#字型與字體" class="headerlink" title="字型與字體"></a>字型與字體</h3><p>font-family:這個屬性可以指定CSS內文字的字型，屬性的值為字型名稱，訪問網站的使用者電腦中需要有安裝相對應的字體才能夠正常顯示，可以指定一串字型，若電腦中沒有相對應第一順位的字體，則會往下一個指定字體尋找。 例如:font-family: Arial, Verdana, sans-serif, “Courier New”,。+</p><p>font-size:此屬性用來指定字體大小，常用的單位有:px , % , em 等等。</p><p>@font-face:這個屬性可以指定連結到字型檔的路徑，連結到此網頁的用戶電腦內若沒有此字型，就會進行下載並顯示在頁面。<br>但要注意的是這個方式允許字型下載到用戶電腦，所以關於字體授權的部分要特別小心。<br>關於font-face用法範例如下:</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@font-face</span>&#123;</span><br><span class="line">   <span class="attribute">font-family</span>: test1;</span><br><span class="line">   <span class="attribute">src</span>: <span class="built_in">url</span>(fonts/test1.ttf) <span class="built_in">format</span>(<span class="string">"opentype"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><pre><code>font-family:這個屬性用來指定字型名稱，在接下來的CSS中可以使用這個屬性內的名稱作為font-family的值。src:這個屬性為字型的路徑。format:這個屬性用來指定字型格式，關於字型有多種格式，可參考以下表格</code></pre><table>  <tr>    <th>副檔名</th>    <th>format指定方式</th>    </tr>  <tr>    <td>.woff</td>    <td>format("woff")</td>   </tr>   <tr>     <td>.ttf、.otf</td>     <td>format("opentype")</td>    </tr>    <tr>     <td>.eot</td>     <td>format("embedded-opentype")</td>    </tr>     <tr>     <td>.svg、.svgz</td>     <td>format("svg")</td>    </tr></table> <h2 id="參考來源"><a href="#參考來源" class="headerlink" title="參考來源:"></a>參考來源:</h2><p>書籍:HTML&amp;CSS 網站設計建置優化之道</p><p><a href="https://www.w3schools.com/colors/default.asp" target="_blank" rel="noopener">Colors Tutorial</a></p>]]></content>
       
       
+      <categories>
+          
+          <category> 複習 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
       
     </entry>
     
     
     
     <entry>
-      <title>200425-CSS複習-簡介</title>
+      <title>200425-CSS-簡介</title>
       <link href="/2020/04/25/200425-CSS%E8%A4%87%E7%BF%92-%E7%B0%A1%E4%BB%8B/"/>
       <url>/2020/04/25/200425-CSS%E8%A4%87%E7%BF%92-%E7%B0%A1%E4%BB%8B/</url>
       

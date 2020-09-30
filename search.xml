@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>200609-CSS-方框</title>
+      <link href="/2020/06/09/200609-CSS-%E6%96%B9%E6%A1%86/"/>
+      <url>/2020/06/09/200609-CSS-%E6%96%B9%E6%A1%86/</url>
+      
+        <content type="html"><![CDATA[<p>以下會有關於CSS內方框的一些基本介紹及應用，我們可以利用一些屬性配置來更改方框尺寸以及外觀，接下來就進入正題吧!</p><a id="more"></a><h2 id="方框尺寸"><a href="#方框尺寸" class="headerlink" title="方框尺寸"></a>方框尺寸</h2><p>height:設定方框高度。</p><p>width:設定方框寬度。</p><p>我們可以使用以上這兩種屬性來調整方框的高度及寬度，常使用的單位為像素、百分比、em。<br>在設計與撰寫RWD網頁時，靈活運用百分比以及em這種相對單位，可以讓頁面設計更有彈性。</p><p>*em是一種相對單位，會相對於標籤本身的font-size值作為單位，若該標籤沒有指定font-size，則會往上尋找父標籤的值作為單位，但要注意的是，如果有多層font-size都使用em，那越內層的標籤將會呈現倍數加大，比如說最外層的font-size值為10px，第二層的值為1.2em，即為10x1.2=12px，但接下來第三層如果還是使用1.2em，則會變成12x1.2=14.4px，以此類推。</p><h2 id="限制高度及寬度"><a href="#限制高度及寬度" class="headerlink" title="限制高度及寬度"></a>限制高度及寬度</h2><p>為了因應一些會隨著使用者螢幕大小縮放的網頁，我們可以使用一些屬性來控制最多可以放大或縮小到甚麼樣的尺寸，屬性說明如下:</p><p>min-width:設定最小寬度。</p><p>max-width:設定最大寬度。</p><p>min-height:設定最小高度。</p><p>max-height:設定最大高度。</p><h2 id="溢出內容的應變方法"><a href="#溢出內容的應變方法" class="headerlink" title="溢出內容的應變方法"></a>溢出內容的應變方法</h2><p>當內容比方框大時，可以使用overflow這個屬性來告訴瀏覽器該如何處理這個狀況，屬性值說明如下:</p><p>overflow:auto;  預設值，會自動使用捲軸。</p><p>overflow:visible;  顯示的內容會直接超出範圍，不使用捲軸。</p><p>overflow:hidden;  自動隱藏超出範圍的內容。</p><p>overflow:scroll;  自動產生捲軸。</p><p>*有時網站會出現x方向的捲軸，此時可以強制隱藏x軸捲軸，並讓y軸自動延伸，方式如下:</p><p>overflow-x:hidden;<br>overflow-y:auto</p><h2 id="邊框寬度"><a href="#邊框寬度" class="headerlink" title="邊框寬度"></a>邊框寬度</h2><p>border-width:這個屬性可以用來控制邊框寬度，可以用像素為單位，也可以使用thin（細）、medium（中）、thick(粗)，須注意的是這個屬性不能使用百分比為單位。</p><p>可以使用以下屬性分別控制</p><p>border-top-width(上)<br>border-right-width(右)<br>border-bottom-width(下)<br>border-left-width(左)</p><p>可以在一個屬性中為四個邊框指定不同粗細，此方式為速記法，寫法如下:</p><p>border-width: 2px 3px 4px 5px;</p><p>在以上出現的值為順時鐘，分別為上、右、下、左。</p><p>border-width: 2px 3px;</p><p>在以上出現的值為上下寬度2px，左右寬度為3px</p><h2 id="邊框樣式"><a href="#邊框樣式" class="headerlink" title="邊框樣式"></a>邊框樣式</h2><p>border-style:可以用來控制邊框樣式，常用樣式可以參考以下網址</p><p><a href="http://www.eion.com.tw/Blogger/?Pid=1118" target="_blank" rel="noopener">http://www.eion.com.tw/Blogger/?Pid=1118</a></p><p>可以改變各方向邊框樣式，屬性如下:</p><p>border-top-style(上)<br>border-right-style(右)<br>border-bottom-style(下)<br>border-left-style(左)</p><p>也可以使用速記法改變各方向邊框樣式:</p><p>border-style: 上 右 下 左;</p><h2 id="邊框顏色"><a href="#邊框顏色" class="headerlink" title="邊框顏色"></a>邊框顏色</h2><p>border-color: 這個屬性用來指定邊框顏色，值可以使用RGB、hex碼、及CSS顏色名。</p><p>可以使用以下屬性改變不同方向邊框顏色</p><p>border-top-color(上)<br>border-right-color(右)<br>border-bottom-color(下)<br>border-left-color(左)</p><p>可以使用速記法</p><p>border-color: 上 右 下 左;</p><h2 id="border速記屬性"><a href="#border速記屬性" class="headerlink" title="border速記屬性"></a>border速記屬性</h2><p>這個屬性可以在單一屬性內同時指定邊框寬度、樣式及顏色，寫法如下:</p><p>border: 3px dotted ##ff8800</p><p>以上分別代表著邊框粗細、樣式、顏色。</p><h2 id="內距-padding"><a href="#內距-padding" class="headerlink" title="內距 padding"></a>內距 padding</h2><p>這個屬性用在指定標籤的內容和邊框之間的距離，在邊界以內，此屬性<br>可使用速記，屬性值可用像素(px)及百分比，寫法如下:</p><p>padding: 10px;</p><p>也可以指定不同方向的直</p><p>padding-top<br>padding-right<br>padding-bottom<br>padding-left</p><h2 id="邊界-margin"><a href="#邊界-margin" class="headerlink" title="邊界 margin"></a>邊界 margin</h2><p>此屬性控制邊框之間的空隙，也就是控制此邊框與其他邊框的距離，可指定不同方向也可使用速記法，寫法如下</p><p>margin: 10px;</p><h2 id="內容置中"><a href="#內容置中" class="headerlink" title="內容置中"></a>內容置中</h2><p>如果想把方框放在頁面中間，可將margin-left與margin-right值設定為auto，速記法寫法如下:</p><p>margin: 20px auto 20px auto;</p><h2 id="隱藏方框-visibility"><a href="#隱藏方框-visibility" class="headerlink" title="隱藏方框 visibility"></a>隱藏方框 visibility</h2><p>這個屬性可以讓方框隱藏，<br>但原有位置會空下來，<br>此屬性有兩個值:</p><p>visibility:hidden<br>這個值會將該標籤內容在網頁中隱藏</p><p>visibility:visible<br>這個值會顯示標籤內容</p><p>如果不希望在原有標籤位置出現空白，<br>應該使用display:none(之後文章會說明)</p><h2 id="CSS3-圓角、橢圓形"><a href="#CSS3-圓角、橢圓形" class="headerlink" title="CSS3 圓角、橢圓形"></a>CSS3 圓角、橢圓形</h2><p>border-radius<br>這個屬性是用來製作方框的圓角，可使用像素及百分比來控制圓角半徑</p><p>例如:<br>border-radius: 10px;</p><p>以上程式碼指定方框四角皆為半徑10px圓角</p><p>也可分別指定個別值<br>border-top-right-radius<br>border-bottom-right-radius<br>border-bottom-left-radius<br>border-top-left-radius</p><p>也可使用速記法</p><p>border-radius: 10px 20px 30px 40px;<br>順序分別為 左上 右上 右下 左下 </p><p>利用分別指定單一邊角的設定，也可製作出橢圓形及圓型</p><h2 id="參考來源"><a href="#參考來源" class="headerlink" title="參考來源:"></a>參考來源:</h2><p>書籍:HTML&amp;CSS 網站設計建置優化之道</p><p><a href="https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/css-%E5%B0%8F%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB-em-%E5%96%AE%E4%BD%8D%E7%9A%84%E5%BC%B7%E5%A4%A7%E7%94%A8%E9%80%94-457dc30a83b4" target="_blank" rel="noopener">CSS 小技巧分享：em 單位的強大用途</a></p><p><a href="https://www.hexschool.com/2016/01/02/2016-08-08-em-vs-rem/" target="_blank" rel="noopener">實際展示 EM 與 REM 的差異</a></p><p><a href="https://www.wibibi.com/info.php?tid=157" target="_blank" rel="noopener">CSS overflow 屬性用法</a></p><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin" target="_blank" rel="noopener">margin</a></p><p><a href="https://zh-tw.learnlayout.com/display.html" target="_blank" rel="noopener">關於 “display” 屬性</a></p><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-radius" target="_blank" rel="noopener">border-radius</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 學習紀錄 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>200514-CSS-色彩與文字</title>
       <link href="/2020/05/14/200514-CSS-%E8%89%B2%E5%BD%A9%E8%88%87%E6%96%87%E5%AD%97/"/>
       <url>/2020/05/14/200514-CSS-%E8%89%B2%E5%BD%A9%E8%88%87%E6%96%87%E5%AD%97/</url>

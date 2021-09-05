@@ -30,7 +30,7 @@
 <meta property="og:description" content="box-sizing這個語法可以讓設計師或是寫程式的人不用去加加減減的計算區塊(比如說線條寬度或是padding之類)直接限定一個最外圍的像素，在由這個像素往內做調整 這個語法是屬於CSS3的語法，算是近幾年來比較新的功能，所以對於一些比較舊版的瀏覽器可能多少會有一點相容性問題，這時候可以使用 Can I use 這個網站去查詢支援的瀏覽器。 那以下我們就做個有使用box-sizing與沒使用的對">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-09-01T16:36:28.000Z">
-<meta property="article:modified_time" content="2021-09-05T13:58:52.864Z">
+<meta property="article:modified_time" content="2021-09-05T14:00:34.519Z">
 <meta property="article:author" content="祥祥">
 <meta name="twitter:card" content="summary">
 
@@ -197,7 +197,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-09-05 21:58:52" itemprop="dateModified" datetime="2021-09-05T21:58:52+08:00">2021-09-05</time>
+                <time title="修改時間：2021-09-05 22:00:34" itemprop="dateModified" datetime="2021-09-05T22:00:34+08:00">2021-09-05</time>
               </span>
 
           
@@ -235,7 +235,7 @@
         <p>box-sizing這個語法可以讓設計師或是寫程式的人不用去加加減減的計算區塊<br>(比如說線條寬度或是padding之類)<br>直接限定一個最外圍的像素，在由這個像素往內做調整</p>
 <p>這個語法是屬於CSS3的語法，算是近幾年來比較新的功能，所以對於一些比較舊版的瀏覽器可能多少會有一點相容性問題，這時候可以使用 <a href="https://caniuse.com/" target="_blank" rel="noopener">Can I use</a> 這個網站去查詢支援的瀏覽器。</p>
 <p>那以下我們就做個有使用box-sizing與沒使用的對照</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*沒有使用box-sizing*/</span></span><br><span class="line"><span class="selector-class">.box-sizing-off</span>&#123;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">10px</span> solid blue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*有使用box-sizing*/</span></span><br><span class="line"><span class="selector-class">.box-sizing-on</span>&#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">10px</span> solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*沒有使用box-sizing*/</span></span><br><span class="line"><span class="selector-class">.box-sizing-off</span>&#123;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">10px</span> solid blue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*有使用box-sizing*/</span></span><br><span class="line"><span class="selector-class">.box-sizing-on</span>&#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">180px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">10px</span> solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <div class="box-sizing-off" >沒有使用box-sizing</div>
 <div class="box-sizing-on">有使用box-sizing</div>
 <style>
@@ -249,7 +249,7 @@
 .box-sizing-on{
     box-sizing: border-box;
     text-align: center;
-    line-height: 200px;
+    line-height: 180px;
     height: 200px;
     width: 200px;
     border: 10px solid red;

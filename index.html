@@ -194,7 +194,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-09-07 01:03:08" itemprop="dateModified" datetime="2021-09-07T01:03:08+08:00">2021-09-07</time>
+                <time title="修改時間：2021-09-08 00:26:44" itemprop="dateModified" datetime="2021-09-08T00:26:44+08:00">2021-09-08</time>
               </span>
 
           
@@ -246,6 +246,39 @@
 <h2 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow"></a>flex-flow</h2><p>我們也可以將上面的direction跟wrap簡化，這個語法就是用來簡化設定這兩種功能的</p>
 <p>以下是他的預設值<br>flex-flow:row nowrap</p>
 <p>只要把direction屬性下在第一個，wrap屬性設定在第二個即可。</p>
+<h2 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h2><p>這個屬性是根據主軸做水平對齊，也就是依照flex-direction所設定的方向，如果flex-direction設定值使用column，此時就會變成垂直對齊，他有以下幾種對齊的方法:</p>
+<p>justify-content: flex-start<br>這個設定為預設值，也就是預設由左到右。</p>
+<img src="/images/flex-start.png" />
+
+<p>justify-content: flex-end<br>item整體會移到Container的右邊，但是裡面的item順序一樣由左到右</p>
+<img src="/images/flex-end.png" />
+
+<p>justify-content: center<br>item整體在Container內置中對齊</p>
+<img src="/images/flex-center.png" />
+
+<p>justify-content: space-between<br>item與item之間平均隔開</p>
+<img src="/images/space-between.png" />
+
+<p>justify-content: space-around<br>這個功能會將容器與內容物做平均，也就是說第一個內容物與最後的內容物都會離容器一個距離，而這個距離會是內容物與內容物之間間距的2分之1</p>
+<img src="/images/space-around.png" />
+
+<h2 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h2><p>這個屬性是根據flex-direction的設定值所對照交錯方向的對齊設定，以下圖示都是使用flex-direction: row 預設值作為參照。</p>
+<p>align-items: flex-start<br>預設值，由起點作對齊       </p>
+<img src="/images/align-items-flex-start.png" />
+
+<p>align-items: flex-end<br>由終點做對齊</p>
+<img src="/images/align-items-flex-end.png" />
+
+<p>align-items: center<br>將item置中</p>
+<img src="/images/align-items-center.png" />
+
+<p>align-items: baseline<br>以item內的第一排文字做對齊(圖面黃線示意)</p>
+<img src="/images/baseline.png" />
+
+<p>align-items: stretch;<br>撐滿整個container(與主軸交錯方向)</p>
+<img src="/images/stretch.png" />
+
+<p>下一篇章節會介紹flexbox使用在內容物item上的屬性</p>
 
       
     </div>

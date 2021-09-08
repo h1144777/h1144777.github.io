@@ -46,7 +46,7 @@
 <meta property="og:image" content="https://h1144777.github.io/images/baseline.png">
 <meta property="og:image" content="https://h1144777.github.io/images/stretch.png">
 <meta property="article:published_time" content="2021-09-06T15:31:19.000Z">
-<meta property="article:modified_time" content="2021-09-07T16:27:30.685Z">
+<meta property="article:modified_time" content="2021-09-08T15:47:36.468Z">
 <meta property="article:author" content="祥祥">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://h1144777.github.io/images/direction-row.png">
@@ -214,7 +214,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-09-08 00:27:30" itemprop="dateModified" datetime="2021-09-08T00:27:30+08:00">2021-09-08</time>
+                <time title="修改時間：2021-09-08 23:47:36" itemprop="dateModified" datetime="2021-09-08T23:47:36+08:00">2021-09-08</time>
               </span>
 
           
@@ -291,7 +291,8 @@
 <p>justify-content: space-around<br>這個功能會將容器與內容物做平均，也就是說第一個內容物與最後的內容物都會離容器一個距離，而這個距離會是內容物與內容物之間間距的2分之1</p>
 <img src="/images/space-around.png" />
 
-<h2 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h2><p>這個屬性是根據flex-direction的設定值所對照交錯方向的對齊設定，以下圖示都是使用flex-direction: row 預設值作為參照。</p>
+<h2 id="align-items-align-content"><a href="#align-items-align-content" class="headerlink" title="align-items  align-content"></a>align-items  align-content</h2><p>這個屬性是根據flex-direction的設定值所對照交錯方向的對齊設定，以下圖示都是使用flex-direction: row 預設值作為參照。</p>
+<p>*單一排內容物時使用的是align-items，但是有多行的元素時就要使用align-content</p>
 <p>align-items: flex-start<br>預設值，由起點作對齊       </p>
 <img src="/images/align-items-flex-start.png" />
 
@@ -306,6 +307,7 @@
 
 <p>align-items: stretch;<br>撐滿整個container(與主軸交錯方向)</p>
 <img src="/images/stretch.png" />
+
 
 <p>下一篇章節會介紹flexbox使用在內容物item上的屬性</p>
 
@@ -326,7 +328,10 @@
     <a href="/2021/09/05/210905-CSS3-Flexbox%E5%9F%BA%E6%9C%AC%E5%85%A7%E5%AE%B9/" rel="prev" title="210905-CSS3-Flexbox-基本用途">
       <i class="fa fa-chevron-left"></i> 210905-CSS3-Flexbox-基本用途
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/09/08/210908-flexbox-%E7%94%A8%E5%9C%A8%E5%85%A7%E5%AE%B9%E7%89%A9-item-%E7%9A%84%E5%B1%AC%E6%80%A7/" rel="next" title="210908-flexbox-用在內容物(item)的屬性">
+      210908-flexbox-用在內容物(item)的屬性 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -393,7 +398,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#flex-direction"><span class="nav-number">1.</span> <span class="nav-text">flex-direction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flex-wrap"><span class="nav-number">2.</span> <span class="nav-text">flex-wrap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flex-flow"><span class="nav-number">3.</span> <span class="nav-text">flex-flow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#justify-content"><span class="nav-number">4.</span> <span class="nav-text">justify-content</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#align-items"><span class="nav-number">5.</span> <span class="nav-text">align-items</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#flex-direction"><span class="nav-number">1.</span> <span class="nav-text">flex-direction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flex-wrap"><span class="nav-number">2.</span> <span class="nav-text">flex-wrap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flex-flow"><span class="nav-number">3.</span> <span class="nav-text">flex-flow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#justify-content"><span class="nav-number">4.</span> <span class="nav-text">justify-content</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#align-items-align-content"><span class="nav-number">5.</span> <span class="nav-text">align-items  align-content</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -409,7 +414,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>

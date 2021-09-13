@@ -4,6 +4,45 @@
   
     
     <entry>
+      <title>210913-Javascript-資料型態</title>
+      <link href="/2021/09/13/210913-Javascript-%E8%B3%87%E6%96%99%E5%9E%8B%E6%85%8B/"/>
+      <url>/2021/09/13/210913-Javascript-%E8%B3%87%E6%96%99%E5%9E%8B%E6%85%8B/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>210913-Javascript-變數</title>
+      <link href="/2021/09/13/210913-Javascript-%E8%AE%8A%E6%95%B8/"/>
+      <url>/2021/09/13/210913-Javascript-%E8%AE%8A%E6%95%B8/</url>
+      
+        <content type="html"><![CDATA[<p>這篇內容會講關於變數的部分</p><a id="more"></a><p>變數簡單來說，就是一個可以放資料的空間，它的用途就是用來儲存資料，以及要讀取資料時可以從變數內讀取資料出來進行運算。</p><p>要把資料放進去變數之前，要先宣告變數:</p><figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="symbol">x</span>;  <span class="comment">//宣告一個名為x的變數名稱</span></span><br></pre></td></tr></table></figure><p>變數名稱也被稱為識別字，雖然說可以自由命名，但是還是有些需要注意的地方:</p><p>識別字名稱只能使用英文大小寫、數字、底線，以及錢符號 $ 作為命名，而且識別字不能用數字作為開頭，大小寫不同會視為不同的識別字，以及JS有一些保留字是不能作為識別字名稱，最後則是習慣會使用駝峰式命名法，用來方便閱讀，比如說 firstName ，就是單字與單字中間不分開，在第二個單字的第一個字母使用大寫。</p><p>JS版本ES6的保留字如下:<br>abstract    arguments    await    boolean<br>break    byte    case    catch<br>char    class    const    continue<br>debugger default delete  do<br>double    else    enum    eval<br>export    extends    false    final<br>finally    float    for        function<br>goto    if    implements    import<br>in    instanceof    int    interface<br>let     long    native    new<br>null    package    private    protected<br>public    return    short    static<br>super    switch    synchronized    this<br>throw    throws    transient    true<br>try    typeof    var    void<br>volatile    while    with    yield</p><p>前面有提到宣告變數的方式，那以下方法則是將資料放入變數裡面的方式:</p><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var x<span class="comment">;</span></span><br><span class="line"><span class="attribute">x</span>=<span class="number">12</span><span class="comment">;</span></span><br></pre></td></tr></table></figure><p>也可以在宣告變數的同時給一個值:</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">var x</span>=12;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>210913-Javascript-新手開始</title>
+      <link href="/2021/09/13/210913-Javascript-%E6%96%B0%E6%89%8B%E9%96%8B%E5%A7%8B/"/>
+      <url>/2021/09/13/210913-Javascript-%E6%96%B0%E6%89%8B%E9%96%8B%E5%A7%8B/</url>
+      
+        <content type="html"><![CDATA[<p>終於寫到JS的部分了，我自己其實也是沒有很懂，所以就記錄在這裡當作是一種學習方式。</p><a id="more"></a><p>我們在使用網頁的時候，會有三個使用者上面會注意到的部分，分別是架構，樣式，以及功能特效等等，用人來比喻的話就是骨骼、樣貌、以及動作之類的三種。<br>HTML就像是網頁的骨骼，是網頁基本架構的部分，而CSS則是網頁外貌，就是所看到的有設計或是美化的部分，那JS所代表的就是功能了，也就是使用者在網路上操作方面或是一些動畫呈現的部分都可以使用JS完成。</p><p>好啦，以上簡介都是湊字數的(大誤)，其實是我自己對於這三種網頁上所需要的語言的認知，所以如果有不正確的地方也歡迎指正，下方就來簡單介紹一下如何開始寫。</p><p>跟CSS一樣，可以直接在html內寫JS，也可以寫成獨立檔案之後，再由html這裡引入JS檔案使用:</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">    alert(<span class="string">'Hello world!'</span>); </span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">網頁內容</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure><p>上面的程式碼是採用直接寫在HTML的方式，在script標籤內，，但是一般來說都是會使用引入檔案的方式來撰寫網站，一來是可以把不同邏輯的JS檔案分開放置，也可以比較好閱讀網頁的程式碼，方式如下:</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"位置/檔名.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">網頁內容</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure><p>在Html4的時候，在位置前需要加上type=”text/javascript”</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="attribute">type</span>=<span class="string">"text/javascript"</span> <span class="attribute">src</span>=<span class="string">""</span>位置/檔名.js"&lt;/script&gt;</span><br></pre></td></tr></table></figure><p> 但是在HTML5以後，預設的樣式語言是使用CSS，script預設則是使用JS，所以type部分可寫可不寫。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>210908-flexbox-用在內容物(item)的屬性</title>
       <link href="/2021/09/08/210908-flexbox-%E7%94%A8%E5%9C%A8%E5%85%A7%E5%AE%B9%E7%89%A9-item-%E7%9A%84%E5%B1%AC%E6%80%A7/"/>
       <url>/2021/09/08/210908-flexbox-%E7%94%A8%E5%9C%A8%E5%85%A7%E5%AE%B9%E7%89%A9-item-%E7%9A%84%E5%B1%AC%E6%80%A7/</url>

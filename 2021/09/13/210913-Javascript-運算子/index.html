@@ -22,15 +22,19 @@
     var CONFIG = {"hostname":"h1144777.github.io","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="h1144777學習日誌">
-<meta property="og:url" content="https://h1144777.github.io/tags/Javascript/index.html">
+  <meta name="description" content="對程式做的任何動作都是運算的一種，運算子簡單說就是用來告知資料與資料之間要用什麼動作做運算。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="210913-Javascript-運算子">
+<meta property="og:url" content="https://h1144777.github.io/2021/09/13/210913-Javascript-%E9%81%8B%E7%AE%97%E5%AD%90/index.html">
 <meta property="og:site_name" content="h1144777學習日誌">
+<meta property="og:description" content="對程式做的任何動作都是運算的一種，運算子簡單說就是用來告知資料與資料之間要用什麼動作做運算。">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2021-09-13T09:51:25.000Z">
+<meta property="article:modified_time" content="2021-09-14T16:04:42.503Z">
 <meta property="article:author" content="祥祥">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://h1144777.github.io/tags/Javascript/">
+<link rel="canonical" href="https://h1144777.github.io/2021/09/13/210913-Javascript-%E9%81%8B%E7%AE%97%E5%AD%90/">
 
 
 <script id="page-configurations">
@@ -38,11 +42,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false
+    isPost: true
   };
 </script>
 
-  <title>標籤: Javascript | h1144777學習日誌</title>
+  <title>210913-Javascript-運算子 | h1144777學習日誌</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158636214-1"></script>
     <script>
@@ -158,94 +162,134 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">Javascript
-          <small>標籤</small>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://h1144777.github.io/2021/09/13/210913-Javascript-%E9%81%8B%E7%AE%97%E5%AD%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.png">
+      <meta itemprop="name" content="祥祥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="h1144777學習日誌">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          210913-Javascript-運算子
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2021-09-13 17:51:25" itemprop="dateCreated datePublished" datetime="2021-09-13T17:51:25+08:00">2021-09-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2021-09-15 00:04:42" itemprop="dateModified" datetime="2021-09-15T00:04:42+08:00">2021-09-15</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2021/09/13/210913-Javascript-%E9%81%8B%E7%AE%97%E5%AD%90/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/09/13/210913-Javascript-運算子/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
-    </div>
+        <p>對程式做的任何動作都是運算的一種，運算子簡單說就是用來告知資料與資料之間要用什麼動作做運算。</p>
+<a id="more"></a>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<p>以下是各種運算子的類別</p>
+<p>指定運算子 (Assignment Operators)<br>比較運算子 (Comparison Operators)<br>算術運算子 (Arithmetic Operators)<br>位元運算子 (Bitwise Operators)<br>邏輯運算子 (Logical Operators)<br>字串運算子 (String Operators)<br>三元運算子 (Conditional (ternary) operator)</p>
+<p>不過以上這些我就是註記一下，原本是想要寫更多關於運算子的內容，不過我爬文發現，這對我來說有的還太難XD，我連新手村都還沒走出來= =，所以我用簡單的方式讓自己稍微理解一下，之後學到更多的時候再來燒腦。<br>舉個最簡單的例子來說，15+15，這個中間的+就是運算子，然後在撰寫程式碼的時候會因為需要因應各種用途去使用不同的運算子去讓程式做運算。</p>
+<p>以下就是將x指定為變數名稱，然後15+15放入變數內，再由alert函數取得x的值30</p>
+<figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="symbol">x</span> = <span class="number">15</span>+<span class="number">15</span>;</span><br><span class="line">alert(<span class="symbol">x</span>);</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-22T22:06:01+08:00"
-              content="2020-02-22">
-          02-22
-        </time>
-      </div>
+<p>但是如果在後面加上了x++，此時第二個alert函數取得的值就會是31，因為x++的意思就是會將變數內數字再加上1，再放回x內，可以理解成x=x+1。</p>
+<figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="symbol">x</span> = <span class="number">15</span>+<span class="number">15</span>;</span><br><span class="line">alert(<span class="symbol">x</span>);</span><br><span class="line"><span class="symbol">x</span>++;</span><br><span class="line">alert(<span class="symbol">x</span>);</span><br></pre></td></tr></table></figure>
 
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/02/22/200222-%E9%A1%9E%E5%88%A5%E7%89%A9%E4%BB%B6%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" itemprop="url">
-            <span itemprop="name">200222-類別物件基本概念</span>
-          </a>
-      </h2>
 
-    </header>
-  </article>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-11T01:38:08+08:00"
-              content="2020-02-11">
-          02-11
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/02/11/200211-this%E9%80%B2%E9%9A%8E/" itemprop="url">
-            <span itemprop="name">200211-學習紀錄 函式的綁定物件this進階</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-05T23:32:53+08:00"
-              content="2020-02-05">
-          02-05
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/02/05/200205-%E5%AD%B8%E7%BF%92%E7%B4%80%E9%8C%84%20%E5%87%BD%E5%BC%8F%E7%9A%84%E7%B6%81%E5%AE%9A%E7%89%A9%E4%BB%B6this%E5%9F%BA%E7%A4%8E/" itemprop="url">
-            <span itemprop="name">200205-學習紀錄 函式的綁定物件this基礎</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
+<p>#參考來源<br><a href="https://www.fooish.com/javascript/operator.html" target="_blank" rel="noopener">https://www.fooish.com/javascript/operator.html</a></p>
+<p><a href="https://www.youtube.com/watch?v=pVXPcl2jFvw&amp;ab_channel=%E5%BD%AD%E5%BD%AD%E7%9A%84%E8%AA%B2%E7%A8%8B" target="_blank" rel="noopener">https://www.youtube.com/watch?v=pVXPcl2jFvw&amp;ab_channel=%E5%BD%AD%E5%BD%AD%E7%9A%84%E8%AA%B2%E7%A8%8B</a></p>
+<p><a href="https://opensourcedoc.com/javascript-programming/operator/" target="_blank" rel="noopener">https://opensourcedoc.com/javascript-programming/operator/</a></p>
+<p><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#%E8%B3%A6%E5%80%BC%E9%81%8B%E7%AE%97%E5%AD%90" target="_blank" rel="noopener">https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#%E8%B3%A6%E5%80%BC%E9%81%8B%E7%AE%97%E5%AD%90</a></p>
 
     </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/09/13/210913-Javascript-%E8%B3%87%E6%96%99%E5%9E%8B%E6%85%8B/" rel="prev" title="210913-Javascript-資料型態">
+      <i class="fa fa-chevron-left"></i> 210913-Javascript-資料型態
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -447,6 +491,30 @@
   }
   // defer loading until the whole page loading is completed
   window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+      this.language = "zh_TW";;
+    this.page.url = "https://h1144777.github.io/2021/09/13/210913-Javascript-%E9%81%8B%E7%AE%97%E5%AD%90/";
+    this.page.identifier = "2021/09/13/210913-Javascript-運算子/";
+    this.page.title = "210913-Javascript-運算子";
+  
+  
+    
+  };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://h1144777.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
 </script>
 
 </body>

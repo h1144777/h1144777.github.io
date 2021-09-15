@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>210915-Javascript-變數與運算子簡單的綜合運用</title>
+      <link href="/2021/09/15/210915-Javascript-%E8%AE%8A%E6%95%B8%E8%88%87%E9%81%8B%E7%AE%97%E5%AD%90%E7%B0%A1%E5%96%AE%E7%9A%84%E7%B6%9C%E5%90%88%E9%81%8B%E7%94%A8/"/>
+      <url>/2021/09/15/210915-Javascript-%E8%AE%8A%E6%95%B8%E8%88%87%E9%81%8B%E7%AE%97%E5%AD%90%E7%B0%A1%E5%96%AE%E7%9A%84%E7%B6%9C%E5%90%88%E9%81%8B%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<p>這裡就記錄一下前兩篇變數與運算子綜合運用的方式，做個簡單練習。</p><a id="more"></a><p>下面就寫一個簡單的乘法計算，最近剛好有點胖了，寫個BMI計算好了。<br>這個部分會使用到prompt()函式，使用這個函式會跳出警告視窗，prompt(“提示文字”,”預設值”)，預設值的部分也可以自行輸入資料。</p><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> <span class="built_in">height</span> = <span class="built_in">prompt</span>(<span class="string">"請輸入身高(單位公尺)"</span>, <span class="string">"1.7"</span>);</span><br><span class="line"><span class="built_in">var</span> weight = <span class="built_in">prompt</span>(<span class="string">"請輸入體重(單位公斤)"</span>, <span class="string">"60"</span>);</span><br><span class="line"><span class="built_in">var</span> result = weight / (<span class="built_in">height</span> * <span class="built_in">height</span>);</span><br><span class="line">alert(result);</span><br></pre></td></tr></table></figure><p>會跳出下列視窗</p><img src="/images/bmi-height.jpg" /><img src="/images/bmi-weight.jpg" /><img src="/images/bmi-result-1.jpg" /><p>雖然說結果出來了，可是因為沒辦法整除，這個小數點實在太多了!!!<br>所以我就去網路找到了下面這個函式</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">toFixed</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure><p>這個函式可以保留小數到指定的位數，最常用到的通常會是保留到小數第二位，如果要保留到小數第二位，就是在括號內輸入2，函式會四捨五入到小數第二位，所以只要把原本的程式碼加進去這個函數，就可以取得BMI了</p><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> <span class="built_in">height</span> = <span class="built_in">prompt</span>(<span class="string">"請輸入身高(單位公尺)"</span>, <span class="string">"1.7"</span>);</span><br><span class="line"><span class="built_in">var</span> weight = <span class="built_in">prompt</span>(<span class="string">"請輸入體重(單位公斤)"</span>, <span class="string">"60"</span>);</span><br><span class="line"><span class="built_in">var</span> result = weight / (<span class="built_in">height</span> * <span class="built_in">height</span>);</span><br><span class="line">alert(result.toFixed(<span class="number">2</span>));</span><br></pre></td></tr></table></figure><p>此時就會得到下面的結果<br><img src="/images/bmi-result-2.jpg" /></p><p>我也試著算一下自己的BMI，不說了，我先去哭了嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚。</p><p>參考資料:<br><a href="https://www.itread01.com/p/986260.html" target="_blank" rel="noopener">https://www.itread01.com/p/986260.html</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>210913-Javascript-運算子</title>
       <link href="/2021/09/13/210913-Javascript-%E9%81%8B%E7%AE%97%E5%AD%90/"/>
       <url>/2021/09/13/210913-Javascript-%E9%81%8B%E7%AE%97%E5%AD%90/</url>

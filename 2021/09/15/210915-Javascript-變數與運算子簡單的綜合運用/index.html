@@ -22,15 +22,24 @@
     var CONFIG = {"hostname":"h1144777.github.io","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="h1144777學習日誌">
-<meta property="og:url" content="https://h1144777.github.io/archives/index.html">
+  <meta name="description" content="這裡就記錄一下前兩篇變數與運算子綜合運用的方式，做個簡單練習。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="210915-Javascript-變數與運算子簡單的綜合運用">
+<meta property="og:url" content="https://h1144777.github.io/2021/09/15/210915-Javascript-%E8%AE%8A%E6%95%B8%E8%88%87%E9%81%8B%E7%AE%97%E5%AD%90%E7%B0%A1%E5%96%AE%E7%9A%84%E7%B6%9C%E5%90%88%E9%81%8B%E7%94%A8/index.html">
 <meta property="og:site_name" content="h1144777學習日誌">
+<meta property="og:description" content="這裡就記錄一下前兩篇變數與運算子綜合運用的方式，做個簡單練習。">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://h1144777.github.io/images/bmi-height.jpg">
+<meta property="og:image" content="https://h1144777.github.io/images/bmi-weight.jpg">
+<meta property="og:image" content="https://h1144777.github.io/images/bmi-result-1.jpg">
+<meta property="og:image" content="https://h1144777.github.io/images/bmi-result-2.jpg">
+<meta property="article:published_time" content="2021-09-15T15:49:16.000Z">
+<meta property="article:modified_time" content="2021-09-15T16:32:06.330Z">
 <meta property="article:author" content="祥祥">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://h1144777.github.io/images/bmi-height.jpg">
 
-<link rel="canonical" href="https://h1144777.github.io/archives/">
+<link rel="canonical" href="https://h1144777.github.io/2021/09/15/210915-Javascript-%E8%AE%8A%E6%95%B8%E8%88%87%E9%81%8B%E7%AE%97%E5%AD%90%E7%B0%A1%E5%96%AE%E7%9A%84%E7%B6%9C%E5%90%88%E9%81%8B%E7%94%A8/">
 
 
 <script id="page-configurations">
@@ -38,11 +47,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false
+    isPost: true
   };
 </script>
 
-  <title>歸檔 | h1144777學習日誌</title>
+  <title>210915-Javascript-變數與運算子簡單的綜合運用 | h1144777學習日誌</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158636214-1"></script>
     <script>
@@ -158,237 +167,133 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://h1144777.github.io/2021/09/15/210915-Javascript-%E8%AE%8A%E6%95%B8%E8%88%87%E9%81%8B%E7%AE%97%E5%AD%90%E7%B0%A1%E5%96%AE%E7%9A%84%E7%B6%9C%E5%90%88%E9%81%8B%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.png">
+      <meta itemprop="name" content="祥祥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="h1144777學習日誌">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          210915-Javascript-變數與運算子簡單的綜合運用
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2021-09-15 23:49:16" itemprop="dateCreated datePublished" datetime="2021-09-15T23:49:16+08:00">2021-09-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2021-09-16 00:32:06" itemprop="dateModified" datetime="2021-09-16T00:32:06+08:00">2021-09-16</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        
-        <span class="collection-header">還行! 目前共有 31 篇文章。 繼續努力。</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2021/09/15/210915-Javascript-%E8%AE%8A%E6%95%B8%E8%88%87%E9%81%8B%E7%AE%97%E5%AD%90%E7%B0%A1%E5%96%AE%E7%9A%84%E7%B6%9C%E5%90%88%E9%81%8B%E7%94%A8/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/09/15/210915-Javascript-變數與運算子簡單的綜合運用/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2021</h1>
-    </div>
+        <p>這裡就記錄一下前兩篇變數與運算子綜合運用的方式，做個簡單練習。</p>
+<a id="more"></a>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<p>下面就寫一個簡單的乘法計算，最近剛好有點胖了，寫個BMI計算好了。<br>這個部分會使用到prompt()函式，使用這個函式會跳出警告視窗，prompt(“提示文字”,”預設值”)，預設值的部分也可以自行輸入資料。</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> <span class="built_in">height</span> = <span class="built_in">prompt</span>(<span class="string">"請輸入身高(單位公尺)"</span>, <span class="string">"1.7"</span>);</span><br><span class="line"><span class="built_in">var</span> weight = <span class="built_in">prompt</span>(<span class="string">"請輸入體重(單位公斤)"</span>, <span class="string">"60"</span>);</span><br><span class="line"><span class="built_in">var</span> result = weight / (<span class="built_in">height</span> * <span class="built_in">height</span>);</span><br><span class="line">alert(result);</span><br></pre></td></tr></table></figure>
+<p>會跳出下列視窗</p>
+<img src="/images/bmi-height.jpg" />
+<img src="/images/bmi-weight.jpg" />
+<img src="/images/bmi-result-1.jpg" />
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-09-15T23:49:16+08:00"
-              content="2021-09-15">
-          09-15
-        </time>
-      </div>
+<p>雖然說結果出來了，可是因為沒辦法整除，這個小數點實在太多了!!!<br>所以我就去網路找到了下面這個函式</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">toFixed</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
 
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2021/09/15/210915-Javascript-%E8%AE%8A%E6%95%B8%E8%88%87%E9%81%8B%E7%AE%97%E5%AD%90%E7%B0%A1%E5%96%AE%E7%9A%84%E7%B6%9C%E5%90%88%E9%81%8B%E7%94%A8/" itemprop="url">
-            <span itemprop="name">210915-Javascript-變數與運算子簡單的綜合運用</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-09-13T17:51:25+08:00"
-              content="2021-09-13">
-          09-13
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2021/09/13/210913-Javascript-%E9%81%8B%E7%AE%97%E5%AD%90/" itemprop="url">
-            <span itemprop="name">210913-Javascript-運算子</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-09-13T17:26:41+08:00"
-              content="2021-09-13">
-          09-13
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2021/09/13/210913-Javascript-%E8%B3%87%E6%96%99%E5%9E%8B%E6%85%8B/" itemprop="url">
-            <span itemprop="name">210913-Javascript-資料型態</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-09-13T16:28:27+08:00"
-              content="2021-09-13">
-          09-13
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2021/09/13/210913-Javascript-%E8%AE%8A%E6%95%B8/" itemprop="url">
-            <span itemprop="name">210913-Javascript-變數</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-09-13T14:35:02+08:00"
-              content="2021-09-13">
-          09-13
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2021/09/13/210913-Javascript-%E6%96%B0%E6%89%8B%E9%96%8B%E5%A7%8B/" itemprop="url">
-            <span itemprop="name">210913-Javascript-新手開始</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-09-08T23:40:25+08:00"
-              content="2021-09-08">
-          09-08
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2021/09/08/210908-flexbox-%E7%94%A8%E5%9C%A8%E5%85%A7%E5%AE%B9%E7%89%A9-item-%E7%9A%84%E5%B1%AC%E6%80%A7/" itemprop="url">
-            <span itemprop="name">210908-flexbox-用在內容物(item)的屬性</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-09-06T23:31:19+08:00"
-              content="2021-09-06">
-          09-06
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2021/09/06/210906-flexbox-%E7%94%A8%E5%9C%A8%E5%A4%96%E5%B1%A4%E5%AE%B9%E5%99%A8%E7%9A%84%E5%B1%AC%E6%80%A7/" itemprop="url">
-            <span itemprop="name">210906-flexbox-用在外層容器的屬性</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-09-05T22:50:35+08:00"
-              content="2021-09-05">
-          09-05
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2021/09/05/210905-CSS3-Flexbox%E5%9F%BA%E6%9C%AC%E5%85%A7%E5%AE%B9/" itemprop="url">
-            <span itemprop="name">210905-CSS3-Flexbox-基本用途</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-09-02T00:36:28+08:00"
-              content="2021-09-02">
-          09-02
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2021/09/02/210902-CSS3-box-sizing/" itemprop="url">
-            <span itemprop="name">210902-CSS3-box-sizing</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-08-30T23:11:57+08:00"
-              content="2021-08-30">
-          08-30
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2021/08/30/210830/" itemprop="url">
-            <span itemprop="name">210830-鐵人賽第一天-從CSS開始-Float浮動效果&clear清除浮動</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
+<p>這個函式可以保留小數到指定的位數，最常用到的通常會是保留到小數第二位，如果要保留到小數第二位，就是在括號內輸入2，函式會四捨五入到小數第二位，所以只要把原本的程式碼加進去這個函數，就可以取得BMI了</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> <span class="built_in">height</span> = <span class="built_in">prompt</span>(<span class="string">"請輸入身高(單位公尺)"</span>, <span class="string">"1.7"</span>);</span><br><span class="line"><span class="built_in">var</span> weight = <span class="built_in">prompt</span>(<span class="string">"請輸入體重(單位公斤)"</span>, <span class="string">"60"</span>);</span><br><span class="line"><span class="built_in">var</span> result = weight / (<span class="built_in">height</span> * <span class="built_in">height</span>);</span><br><span class="line">alert(result.toFixed(<span class="number">2</span>));</span><br></pre></td></tr></table></figure>
+<p>此時就會得到下面的結果<br><img src="/images/bmi-result-2.jpg" /></p>
+<p>我也試著算一下自己的BMI，不說了，我先去哭了嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚。</p>
+<p>參考資料:<br><a href="https://www.itread01.com/p/986260.html" target="_blank" rel="noopener">https://www.itread01.com/p/986260.html</a></p>
 
     </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/09/13/210913-Javascript-%E9%81%8B%E7%AE%97%E5%AD%90/" rel="prev" title="210913-Javascript-運算子">
+      <i class="fa fa-chevron-left"></i> 210913-Javascript-運算子
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
-  
-  
-  
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
-  </nav>
-
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -590,6 +495,30 @@
   }
   // defer loading until the whole page loading is completed
   window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+      this.language = "zh_TW";;
+    this.page.url = "https://h1144777.github.io/2021/09/15/210915-Javascript-%E8%AE%8A%E6%95%B8%E8%88%87%E9%81%8B%E7%AE%97%E5%AD%90%E7%B0%A1%E5%96%AE%E7%9A%84%E7%B6%9C%E5%90%88%E9%81%8B%E7%94%A8/";
+    this.page.identifier = "2021/09/15/210915-Javascript-變數與運算子簡單的綜合運用/";
+    this.page.title = "210915-Javascript-變數與運算子簡單的綜合運用";
+  
+  
+    
+  };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://h1144777.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
 </script>
 
 </body>

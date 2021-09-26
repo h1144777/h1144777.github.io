@@ -22,21 +22,19 @@
     var CONFIG = {"hostname":"h1144777.github.io","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="參考網站: 1. Next主題   2. Hexo Next 加入 FB 留言版   3. 隱私權政策URL自動生成(申請FB SDK用)">
+  <meta name="description" content="今天要來提到的是判斷式的部分，在JS中判斷式有兩種語法:if...else和 switch。這篇我們會先來看到if…else的部分。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="200208-blog主題與設定">
-<meta property="og:url" content="https://h1144777.github.io/2020/02/09/200208-blog%E4%B8%BB%E9%A1%8C%E8%88%87%E8%A8%AD%E5%AE%9A/index.html">
+<meta property="og:title" content="210922-Day13-終於要進去新手村了-Javascript-判斷式基本結構-if…else">
+<meta property="og:url" content="https://h1144777.github.io/2021/09/25/210922-Day8-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%88%A4%E6%96%B7%E5%BC%8F%E5%9F%BA%E6%9C%AC%E7%B5%90%E6%A7%8B/index.html">
 <meta property="og:site_name" content="h1144777學習日誌">
-<meta property="og:description" content="參考網站: 1. Next主題   2. Hexo Next 加入 FB 留言版   3. 隱私權政策URL自動生成(申請FB SDK用)">
+<meta property="og:description" content="今天要來提到的是判斷式的部分，在JS中判斷式有兩種語法:if...else和 switch。這篇我們會先來看到if…else的部分。">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2020-02-09T14:16:49.000Z">
-<meta property="article:modified_time" content="2020-03-01T10:36:46.937Z">
+<meta property="article:published_time" content="2021-09-25T15:56:12.000Z">
+<meta property="article:modified_time" content="2021-09-26T10:01:29.266Z">
 <meta property="article:author" content="祥祥">
-<meta property="article:tag" content="Blog">
-<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://h1144777.github.io/2020/02/09/200208-blog%E4%B8%BB%E9%A1%8C%E8%88%87%E8%A8%AD%E5%AE%9A/">
+<link rel="canonical" href="https://h1144777.github.io/2021/09/25/210922-Day8-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%88%A4%E6%96%B7%E5%BC%8F%E5%9F%BA%E6%9C%AC%E7%B5%90%E6%A7%8B/">
 
 
 <script id="page-configurations">
@@ -48,7 +46,7 @@
   };
 </script>
 
-  <title>200208-blog主題與設定 | h1144777學習日誌</title>
+  <title>210922-Day13-終於要進去新手村了-Javascript-判斷式基本結構-if…else | h1144777學習日誌</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158636214-1"></script>
     <script>
@@ -169,7 +167,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://h1144777.github.io/2020/02/09/200208-blog%E4%B8%BB%E9%A1%8C%E8%88%87%E8%A8%AD%E5%AE%9A/">
+    <link itemprop="mainEntityOfPage" href="https://h1144777.github.io/2021/09/25/210922-Day8-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%88%A4%E6%96%B7%E5%BC%8F%E5%9F%BA%E6%9C%AC%E7%B5%90%E6%A7%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head.png">
@@ -182,7 +180,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          200208-blog主題與設定
+          210922-Day13-終於要進去新手村了-Javascript-判斷式基本結構-if…else
         </h1>
 
         <div class="post-meta">
@@ -192,26 +190,15 @@
               </span>
               <span class="post-meta-item-text">發表於</span>
 
-              <time title="創建時間：2020-02-09 22:16:49" itemprop="dateCreated datePublished" datetime="2020-02-09T22:16:49+08:00">2020-02-09</time>
+              <time title="創建時間：2021-09-25 23:56:12" itemprop="dateCreated datePublished" datetime="2021-09-25T23:56:12+08:00">2021-09-25</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-03-01 18:36:46" itemprop="dateModified" datetime="2020-03-01T18:36:46+08:00">2020-03-01</time>
+                <time title="修改時間：2021-09-26 18:01:29" itemprop="dateModified" datetime="2021-09-26T18:01:29+08:00">2021-09-26</time>
               </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/BLOG%E6%9B%B4%E6%96%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">BLOG更新</span>
-                  </a>
-                </span>
-            </span>
 
           
             <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv" style="display: none;">
@@ -229,8 +216,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2020/02/09/200208-blog%E4%B8%BB%E9%A1%8C%E8%88%87%E8%A8%AD%E5%AE%9A/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/02/09/200208-blog主題與設定/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2021/09/25/210922-Day8-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%88%A4%E6%96%B7%E5%BC%8F%E5%9F%BA%E6%9C%AC%E7%B5%90%E6%A7%8B/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/09/25/210922-Day8-終於要進去新手村了-Javascript-判斷式基本結構/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -245,26 +232,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="參考網站"><a href="#參考網站" class="headerlink" title="參考網站:"></a>參考網站:</h2><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">
-1. Next主題</a>
-<br/>
-<a href="https://hsiangfeng.github.io/hexo/20190518/3303379172/" target="_blank" rel="noopener">
-2. Hexo Next 加入 FB 留言版</a>
-<br/>
-<a href="https://blog.niclin.tw/2019/01/05/%E5%A5%BD%E7%94%A8%E7%9A%84%E9%9A%B1%E7%A7%81%E6%AC%8A%E6%94%BF%E7%AD%96-url-%E8%87%AA%E5%8B%95%E7%94%9F%E6%88%90/" target="_blank" rel="noopener">
-3. 隱私權政策URL自動生成(申請FB SDK用)</a>
-
-
+        <p>今天要來提到的是判斷式的部分，在JS中判斷式有兩種語法:<code>if...else</code>和 <code>switch</code>。<br>這篇我們會先來看到if…else的部分。</p>
 <a id="more"></a>
-<br/>
-<br/>
-<br/>
 
-
-
-
-<p>套用Hexo的主題”Next”<br>並修改主題內Config.yml的自訂設定</p>
-<p>申請Facebook SDK<br>設定Facebook 留言板外掛</p>
+<p>if…else基本結構如下方:</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if (裡面放設定好的條件，裡面會放邏輯運算子或比較運算子)&#123;</span><br><span class="line">    裡面放條件符合會執行的內容<span class="comment">;&#125;</span></span><br><span class="line">else &#123;</span><br><span class="line">    條件不成立就會執行的內容<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>但是有時候會會需要有多重條件，這時候就可以使用到<code>else...if</code><br>比如說:</p>
+<pre><code>if (條件1) {
+    符合條件1後執行;}
+else if (條件2){
+    如果條件1不成立，但是條件2成立的話就會執行的內容;
+}
+else {
+    如果以上條件都不成立就會執行的內容;
+    }</code></pre><p>參考來源:<br><a href="https://medium.com/%E9%A6%AC%E6%A0%BC%E8%95%BE%E7%89%B9%E7%9A%84%E5%86%92%E9%9A%AA%E8%80%85%E6%97%A5%E8%AA%8C/js-%E5%88%A4%E6%96%B7%E7%AD%86%E8%A8%98-%E9%81%8B%E7%AE%97%E5%AD%90-if-switch-a9f5e535835b" target="_blank" rel="noopener">https://medium.com/%E9%A6%AC%E6%A0%BC%E8%95%BE%E7%89%B9%E7%9A%84%E5%86%92%E9%9A%AA%E8%80%85%E6%97%A5%E8%AA%8C/js-%E5%88%A4%E6%96%B7%E7%AD%86%E8%A8%98-%E9%81%8B%E7%AE%97%E5%AD%90-if-switch-a9f5e535835b</a></p>
+<p><a href="https://www.youtube.com/watch?v=pVXPcl2jFvw" target="_blank" rel="noopener">https://www.youtube.com/watch?v=pVXPcl2jFvw</a></p>
 
     </div>
 
@@ -273,10 +255,6 @@
     
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Blog/" rel="tag"># Blog</a>
-              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
-          </div>
 
         
 
@@ -284,12 +262,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/02/05/200205-%E5%AD%B8%E7%BF%92%E7%B4%80%E9%8C%84%20%E5%87%BD%E5%BC%8F%E7%9A%84%E7%B6%81%E5%AE%9A%E7%89%A9%E4%BB%B6this%E5%9F%BA%E7%A4%8E/" rel="prev" title="200205-學習紀錄 函式的綁定物件this基礎">
-      <i class="fa fa-chevron-left"></i> 200205-學習紀錄 函式的綁定物件this基礎
+    <a href="/2021/09/23/210922-Day7-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E8%B3%87%E6%96%99%E5%9E%8B%E6%85%8B%E8%BD%89%E6%8F%9B-%E5%AD%97%E4%B8%B2/" rel="prev" title="210922-Day12:終於要進去新手村了-Javascript-資料型態轉換-將字串變成數字">
+      <i class="fa fa-chevron-left"></i> 210922-Day12:終於要進去新手村了-Javascript-資料型態轉換-將字串變成數字
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/02/11/200211-this%E9%80%B2%E9%9A%8E/" rel="next" title="200211-學習紀錄 函式的綁定物件this進階">
-      200211-學習紀錄 函式的綁定物件this進階 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/09/26/210926-Javascript-isNaN%E5%87%BD%E6%95%B8/" rel="next" title="210926-Javascript-isNaN函數">
+      210926-Javascript-isNaN函數 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -357,7 +335,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#參考網站"><span class="nav-number">1.</span> <span class="nav-text">參考網站:</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -517,9 +494,9 @@
 <script>
   var disqus_config = function() {
       this.language = "zh_TW";;
-    this.page.url = "https://h1144777.github.io/2020/02/09/200208-blog%E4%B8%BB%E9%A1%8C%E8%88%87%E8%A8%AD%E5%AE%9A/";
-    this.page.identifier = "2020/02/09/200208-blog主題與設定/";
-    this.page.title = "200208-blog主題與設定";
+    this.page.url = "https://h1144777.github.io/2021/09/25/210922-Day8-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%88%A4%E6%96%B7%E5%BC%8F%E5%9F%BA%E6%9C%AC%E7%B5%90%E6%A7%8B/";
+    this.page.identifier = "2021/09/25/210922-Day8-終於要進去新手村了-Javascript-判斷式基本結構/";
+    this.page.title = "210922-Day13-終於要進去新手村了-Javascript-判斷式基本結構-if…else";
   
   
     

@@ -4,6 +4,45 @@
   
     
     <entry>
+      <title>210926-Javascript-isNaN函數</title>
+      <link href="/2021/09/26/210926-Javascript-isNaN%E5%87%BD%E6%95%B8/"/>
+      <url>/2021/09/26/210926-Javascript-isNaN%E5%87%BD%E6%95%B8/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>210922-Day13-終於要進去新手村了-Javascript-判斷式基本結構-if…else</title>
+      <link href="/2021/09/25/210922-Day8-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%88%A4%E6%96%B7%E5%BC%8F%E5%9F%BA%E6%9C%AC%E7%B5%90%E6%A7%8B/"/>
+      <url>/2021/09/25/210922-Day8-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%88%A4%E6%96%B7%E5%BC%8F%E5%9F%BA%E6%9C%AC%E7%B5%90%E6%A7%8B/</url>
+      
+        <content type="html"><![CDATA[<p>今天要來提到的是判斷式的部分，在JS中判斷式有兩種語法:<code>if...else</code>和 <code>switch</code>。<br>這篇我們會先來看到if…else的部分。</p><a id="more"></a><p>if…else基本結構如下方:</p><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if (裡面放設定好的條件，裡面會放邏輯運算子或比較運算子)&#123;</span><br><span class="line">    裡面放條件符合會執行的內容<span class="comment">;&#125;</span></span><br><span class="line">else &#123;</span><br><span class="line">    條件不成立就會執行的內容<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>但是有時候會會需要有多重條件，這時候就可以使用到<code>else...if</code><br>比如說:</p><pre><code>if (條件1) {    符合條件1後執行;}else if (條件2){    如果條件1不成立，但是條件2成立的話就會執行的內容;}else {    如果以上條件都不成立就會執行的內容;    }</code></pre><p>參考來源:<br><a href="https://medium.com/%E9%A6%AC%E6%A0%BC%E8%95%BE%E7%89%B9%E7%9A%84%E5%86%92%E9%9A%AA%E8%80%85%E6%97%A5%E8%AA%8C/js-%E5%88%A4%E6%96%B7%E7%AD%86%E8%A8%98-%E9%81%8B%E7%AE%97%E5%AD%90-if-switch-a9f5e535835b" target="_blank" rel="noopener">https://medium.com/%E9%A6%AC%E6%A0%BC%E8%95%BE%E7%89%B9%E7%9A%84%E5%86%92%E9%9A%AA%E8%80%85%E6%97%A5%E8%AA%8C/js-%E5%88%A4%E6%96%B7%E7%AD%86%E8%A8%98-%E9%81%8B%E7%AE%97%E5%AD%90-if-switch-a9f5e535835b</a></p><p><a href="https://www.youtube.com/watch?v=pVXPcl2jFvw" target="_blank" rel="noopener">https://www.youtube.com/watch?v=pVXPcl2jFvw</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>210922-Day12:終於要進去新手村了-Javascript-資料型態轉換-將字串變成數字</title>
+      <link href="/2021/09/23/210922-Day7-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E8%B3%87%E6%96%99%E5%9E%8B%E6%85%8B%E8%BD%89%E6%8F%9B-%E5%AD%97%E4%B8%B2/"/>
+      <url>/2021/09/23/210922-Day7-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E8%B3%87%E6%96%99%E5%9E%8B%E6%85%8B%E8%BD%89%E6%8F%9B-%E5%AD%97%E4%B8%B2/</url>
+      
+        <content type="html"><![CDATA[<p>前兩篇文章中有認識到了變數是要用來放資料的，但是有時候會遇到資料內容需要不同的類型，比如說數字，它可以是一串單純文字字串，也可以是要用來做運算的資料，所以這次用到了Number()函數</p><p>這次的舉例也會用prompt()函數，這個函數是一種輸入型函數，用這個函數可以讓瀏覽器出現輸入視窗讓使用者輸入資料。</p><p>比如說</p><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> n1=<span class="built_in">prompt</span>(<span class="string">"請輸入數字"</span>,<span class="string">""</span>);</span><br><span class="line"><span class="built_in">var</span> n2=<span class="built_in">prompt</span>(<span class="string">"請輸入數字"</span>,<span class="string">""</span>);</span><br></pre></td></tr></table></figure><p>此時警告視窗的輸入框內打入數字，程式判別會是字串</p><p>如果加入Number()函數的話</p><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var n1=prompt(<span class="string">"請輸入數字"</span>,<span class="string">""</span>)<span class="comment">;</span></span><br><span class="line">var n2=prompt(<span class="string">"請輸入數字"</span>,<span class="string">""</span>)<span class="comment">;</span></span><br><span class="line">n1=Number(<span class="name">n1</span>)<span class="comment">;</span></span><br><span class="line">n2=Number(<span class="name">n2</span>)<span class="comment">;</span></span><br></pre></td></tr></table></figure><p>此時輸入的數字,也就是變數n1跟n2就會判定成可運算數字。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>210915-Javascript-變數與運算子簡單的綜合運用</title>
       <link href="/2021/09/15/210915-Javascript-%E8%AE%8A%E6%95%B8%E8%88%87%E9%81%8B%E7%AE%97%E5%AD%90%E7%B0%A1%E5%96%AE%E7%9A%84%E7%B6%9C%E5%90%88%E9%81%8B%E7%94%A8/"/>
       <url>/2021/09/15/210915-Javascript-%E8%AE%8A%E6%95%B8%E8%88%87%E9%81%8B%E7%AE%97%E5%AD%90%E7%B0%A1%E5%96%AE%E7%9A%84%E7%B6%9C%E5%90%88%E9%81%8B%E7%94%A8/</url>

@@ -22,15 +22,19 @@
     var CONFIG = {"hostname":"h1144777.github.io","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="h1144777學習日誌">
-<meta property="og:url" content="https://h1144777.github.io/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/index.html">
+  <meta name="description" content="迴圈有兩種語法可以使用，分別是while與for迴圈，今天這篇會先來講到while迴圈的部分。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="210927-Javascript-迴圈-while">
+<meta property="og:url" content="https://h1144777.github.io/2021/09/27/210928-Javascript-%E8%BF%B4%E5%9C%88-while/index.html">
 <meta property="og:site_name" content="h1144777學習日誌">
+<meta property="og:description" content="迴圈有兩種語法可以使用，分別是while與for迴圈，今天這篇會先來講到while迴圈的部分。">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2021-09-27T14:18:04.000Z">
+<meta property="article:modified_time" content="2021-09-27T14:31:03.207Z">
 <meta property="article:author" content="祥祥">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://h1144777.github.io/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/">
+<link rel="canonical" href="https://h1144777.github.io/2021/09/27/210928-Javascript-%E8%BF%B4%E5%9C%88-while/">
 
 
 <script id="page-configurations">
@@ -38,11 +42,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false
+    isPost: true
   };
 </script>
 
-  <title>標籤: 版本控制 | h1144777學習日誌</title>
+  <title>210927-Javascript-迴圈-while | h1144777學習日誌</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158636214-1"></script>
     <script>
@@ -158,74 +162,118 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">版本控制
-          <small>標籤</small>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://h1144777.github.io/2021/09/27/210928-Javascript-%E8%BF%B4%E5%9C%88-while/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.png">
+      <meta itemprop="name" content="祥祥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="h1144777學習日誌">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          210927-Javascript-迴圈-while
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2021-09-27 22:18:04 / 修改時間：22:31:03" itemprop="dateCreated datePublished" datetime="2021-09-27T22:18:04+08:00">2021-09-27</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2021/09/27/210928-Javascript-%E8%BF%B4%E5%9C%88-while/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/09/27/210928-Javascript-迴圈-while/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
-    </div>
+        <p>迴圈有兩種語法可以使用，分別是while與for迴圈，今天這篇會先來講到while迴圈的部分。</p>
+<a id="more"></a>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-04-09T23:18:08+08:00"
-              content="2020-04-09">
-          04-09
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/04/09/200409-SourceTree-Git-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-%E5%88%86%E6%94%AF/" itemprop="url">
-            <span itemprop="name">200409-SourceTree-Git-版本控制-分支</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-04-08T23:16:31+08:00"
-              content="2020-04-08">
-          04-08
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/04/08/200408-SourceTree-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-%E5%B0%8E%E5%85%A5%E5%B0%88%E6%A1%88/" itemprop="url">
-            <span itemprop="name">200408-SourceTree-Git-版本控制-導入專案</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
+<p>基本結構如下:</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(布林值或是資料)&#123;</span><br><span class="line">    程式碼;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以下舉個簡單的例子作範例:</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> <span class="built_in">n</span>=<span class="number">0</span>;</span><br><span class="line">while(<span class="built_in">n</span>&lt;=<span class="number">50</span>)&#123;</span><br><span class="line">    <span class="built_in">n</span>++;</span><br><span class="line">&#125;</span><br><span class="line">alert(<span class="built_in">n</span>);</span><br></pre></td></tr></table></figure>
+<p>上方的程式碼會讓警告視窗跳出51，因為當n&lt;=50的時候判斷結果是正確，就會在迴圈裡繼續運算，直到判斷結果錯誤才會跳脫整個迴圈架構。<br>我們可以把上方的程式碼解釋為n這個變數的原始資料為0，符合判斷式內的n&lt;=50，所以運算了n++(n++就是n+1的意思)，所以第一次運作完迴圈n變成1，但是依然還是符合判斷式內的n&lt;=50，所以第二次運作n的資料變成了1，再運算一次n++，第二次完依然符合判斷式，以此類推到n的資料變成50的時候，執行n++後變成51，不符合n&lt;=50後才跳出迴圈執行下一行程式碼alert，此時的n結果即為51。</p>
+<p>參考來源:<br><a href="https://www.fooish.com/javascript/while-loop.html" target="_blank" rel="noopener">https://www.fooish.com/javascript/while-loop.html</a><br><a href="https://www.youtube.com/watch?v=uvLMIXuuc-8" target="_blank" rel="noopener">https://www.youtube.com/watch?v=uvLMIXuuc-8</a></p>
 
     </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/09/26/210927-Javascript-isNaN%E5%87%BD%E5%BC%8F/" rel="prev" title="210927-Javascript-isNaN函式">
+      <i class="fa fa-chevron-left"></i> 210927-Javascript-isNaN函式
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -427,6 +475,30 @@
   }
   // defer loading until the whole page loading is completed
   window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+      this.language = "zh_TW";;
+    this.page.url = "https://h1144777.github.io/2021/09/27/210928-Javascript-%E8%BF%B4%E5%9C%88-while/";
+    this.page.identifier = "2021/09/27/210928-Javascript-迴圈-while/";
+    this.page.title = "210927-Javascript-迴圈-while";
+  
+  
+    
+  };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://h1144777.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
 </script>
 
 </body>

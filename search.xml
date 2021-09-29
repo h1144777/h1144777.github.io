@@ -4,9 +4,35 @@
   
     
     <entry>
+      <title>210929-Javascript-迴圈-for</title>
+      <link href="/2021/09/29/210929-Javascript-%E8%BF%B4%E5%9C%88-for/"/>
+      <url>/2021/09/29/210929-Javascript-%E8%BF%B4%E5%9C%88-for/</url>
+      
+        <content type="html"><![CDATA[<p>今天也看了彭彭的影片，要來記錄的是for迴圈的部分，基本上判斷概念跟while迴圈一樣，需要注意初始區塊與迴圈區塊的使用時機。</p><a id="more"></a><p>基本架構如下</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">for</span><span class="params">(初始化命令;判斷是否繼續下次迴圈;每次迴圈後執行)</span></span>&#123;</span><br><span class="line">    迴圈中的程式碼區塊</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>我們一樣用for回圈做1~100的總和，程式碼如下:</p><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> <span class="built_in">sum</span> = <span class="number">0</span>;</span><br><span class="line">for(<span class="built_in">var</span> i=<span class="number">1</span>;i&lt;=<span class="number">100</span>;i++)&#123;</span><br><span class="line">    <span class="built_in">sum</span> = <span class="built_in">sum</span> + i;</span><br><span class="line">&#125;</span><br><span class="line">alert(<span class="built_in">sum</span>);</span><br></pre></td></tr></table></figure><p>我們可以把他理解成，中間區塊為while()內的資料，一開始先初始化設定變數i的資料為1，條件符合i&lt;=100，所以執行下方sum = sum + i，所以第一次執行完成後sum資料變成了1，也因為第一次的條件符合，所以執行了i++，接著第二次迴圈，因為i++後，i的資料=2，一樣符合i&lt;=100，所以繼續執行下方sum = sum + i，也因為有了第一次迴圈的資料，放入資料後sum = 1 + 2，同時也執行i++，直到不符合條件後跳出迴圈往下執行alert(sum)。</p><p>參考來源:<br><a href="https://tigercosmos.xyz/post/2018/11/master_js/loop/" target="_blank" rel="noopener">https://tigercosmos.xyz/post/2018/11/master_js/loop/</a><br><a href="https://www.youtube.com/watch?v=uvLMIXuuc-8" target="_blank" rel="noopener">https://www.youtube.com/watch?v=uvLMIXuuc-8</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>210928-Javascript-迴圈-while-簡單舉例練習</title>
+      <link href="/2021/09/28/210928-Javascript-%E8%BF%B4%E5%9C%88-while-%E7%B0%A1%E5%96%AE%E8%88%89%E4%BE%8B/"/>
+      <url>/2021/09/28/210928-Javascript-%E8%BF%B4%E5%9C%88-while-%E7%B0%A1%E5%96%AE%E8%88%89%E4%BE%8B/</url>
+      
+        <content type="html"><![CDATA[<p>今天看了彭彭老師的影片，他使用了程式碼做舉例，這篇我會使用他舉例的程式，再另外加上自己筆記讓印象加深</p><p>程式碼如下:</p><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> <span class="keyword">sum</span> = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">var</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (i &lt;= <span class="number">100</span>) &#123;</span><br><span class="line">  <span class="keyword">sum</span> = <span class="keyword">sum</span> + i;  <span class="comment">//也可以寫成sum+=i</span></span><br><span class="line">  i++;</span><br><span class="line">&#125;</span><br><span class="line">alert(<span class="keyword">sum</span>);</span><br></pre></td></tr></table></figure><p>這組程式碼的用途是做1<del>100的總和計算，在一開始i=1的時候，因為符合i &lt;= 100的條件所以執行迴圈，依照程式碼由上往下執行分別是sum = sum + i(套入數字後變成sum =0 + 1)，再執行下方i++(++ = + 1 的意思，也就是i+1) 原本i=1再加1後第一次迴圈的i資料變成了2，剛剛執行的sum的資料也變成了1，因為i=2符合i &lt;= 100的條件，所以繼續執行到i=101的時候因為不符合條件跳出迴圈，到下一行alert(sum)，也因為i=101的時候就已經不符合條件跳出迴圈，所以可以知道總和是由0</del>100去做計算，最後結果為5050。</p><p>參考來源:<br><a href="https://www.youtube.com/watch?v=uvLMIXuuc-8&amp;ab_channel=%E5%BD%AD%E5%BD%AD%E7%9A%84%E8%AA%B2%E7%A8%8B" target="_blank" rel="noopener">https://www.youtube.com/watch?v=uvLMIXuuc-8&amp;ab_channel=%E5%BD%AD%E5%BD%AD%E7%9A%84%E8%AA%B2%E7%A8%8B</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>210927-Javascript-迴圈-while</title>
-      <link href="/2021/09/27/210928-Javascript-%E8%BF%B4%E5%9C%88-while/"/>
-      <url>/2021/09/27/210928-Javascript-%E8%BF%B4%E5%9C%88-while/</url>
+      <link href="/2021/09/27/210927-Javascript-%E8%BF%B4%E5%9C%88-while/"/>
+      <url>/2021/09/27/210927-Javascript-%E8%BF%B4%E5%9C%88-while/</url>
       
         <content type="html"><![CDATA[<p>迴圈有兩種語法可以使用，分別是while與for迴圈，今天這篇會先來講到while迴圈的部分。</p><a id="more"></a><p>基本結構如下:</p><figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(布林值或是資料)&#123;</span><br><span class="line">    程式碼;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>以下舉個簡單的例子作範例:</p><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> <span class="built_in">n</span>=<span class="number">0</span>;</span><br><span class="line">while(<span class="built_in">n</span>&lt;=<span class="number">50</span>)&#123;</span><br><span class="line">    <span class="built_in">n</span>++;</span><br><span class="line">&#125;</span><br><span class="line">alert(<span class="built_in">n</span>);</span><br></pre></td></tr></table></figure><p>上方的程式碼會讓警告視窗跳出51，因為當n&lt;=50的時候判斷結果是正確，就會在迴圈裡繼續運算，直到判斷結果錯誤才會跳脫整個迴圈架構。<br>我們可以把上方的程式碼解釋為n這個變數的原始資料為0，符合判斷式內的n&lt;=50，所以運算了n++(n++就是n+1的意思)，所以第一次運作完迴圈n變成1，但是依然還是符合判斷式內的n&lt;=50，所以第二次運作n的資料變成了1，再運算一次n++，第二次完依然符合判斷式，以此類推到n的資料變成50的時候，執行n++後變成51，不符合n&lt;=50後才跳出迴圈執行下一行程式碼alert，此時的n結果即為51。</p><p>參考來源:<br><a href="https://www.fooish.com/javascript/while-loop.html" target="_blank" rel="noopener">https://www.fooish.com/javascript/while-loop.html</a><br><a href="https://www.youtube.com/watch?v=uvLMIXuuc-8" target="_blank" rel="noopener">https://www.youtube.com/watch?v=uvLMIXuuc-8</a></p>]]></content>
       

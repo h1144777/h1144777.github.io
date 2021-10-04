@@ -4,7 +4,59 @@
   
     
     <entry>
-      <title>210930-Javascript-迴圈-break、continue</title>
+      <title>211004-Day22:終於要進去新手村了-Javascript-物件建立</title>
+      <link href="/2021/10/04/211004-Day22-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E7%89%A9%E4%BB%B6%E5%BB%BA%E7%AB%8B%E3%80%81%E5%9F%BA%E7%A4%8E%E4%BD%BF%E7%94%A8/"/>
+      <url>/2021/10/04/211004-Day22-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E7%89%A9%E4%BB%B6%E5%BB%BA%E7%AB%8B%E3%80%81%E5%9F%BA%E7%A4%8E%E4%BD%BF%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<p>接下來文章內紀錄的是我對於物件的解釋，這部分對我來說比較複雜一點，所以有錯誤的話再麻煩指教。</p><a id="more"></a><p>物件可以看作是一種複合資料型態，我自己會認知成相關資料放在同一個群組之中，裡面可以儲存鍵值，在物件內的一組鍵值可以看做是物件的屬性，任何資料型態都可以是屬性的值，屬性的名稱則是屬於字串。</p><p>建立空白物件方法如下</p><p>1.物件建構式<br><code>var point = new Object;</code><br>上方程式碼就是把空白物件建立在point變數中。</p><p>2.物件實字<br><code>var point ={}</code><br>上方直接用大括號就可以宣告物件。</p><p>物件內的資料如果不是函數，就會被稱作為屬性，但是資料如果是函數的話就會視為是物件的方法，物件的可以設定物件的動作，跟函式的概念有點像。</p><p>Javascript也有一些內建的物件可以使用，雖然說我還沒學到這邊，但是還是可以做個紀錄。</p><p>以下引用Fooish 程式技術 這個網站的整理</p><p>Number 物件: 屬於數字型態物件。<br>Boolean 物件: 也就是布林值，真就是 true，假就是 false。<br>String 字串物件: 就是文字。<br>Array 陣列物件: 可用來容納任何其他物件。<br>Math 物件: 提供許多數學常數及數學計算函數。<br>Date 物件: 處理時間和日期的物件。<br>RegExp 物件: 正規表示法物件。</p><p>下一篇會用個簡單的例子作為學習紀錄。</p><p>參考來源:<br><a href="https://www.youtube.com/watch?v=Vwg7BaPBK-Y" target="_blank" rel="noopener">https://www.youtube.com/watch?v=Vwg7BaPBK-Y</a><br><a href="https://www.fooish.com/javascript/object.html" target="_blank" rel="noopener">https://www.fooish.com/javascript/object.html</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>211003-Day21:終於要進去新手村了-Javascript-函式-概念</title>
+      <link href="/2021/10/03/211003-Day21-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%87%BD%E5%BC%8F-%E6%A6%82%E5%BF%B5/"/>
+      <url>/2021/10/03/211003-Day21-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%87%BD%E5%BC%8F-%E6%A6%82%E5%BF%B5/</url>
+      
+        <content type="html"><![CDATA[<p>這篇我會記錄看教學影片所筆記的一些內容，用來幫助理解函式的一些觀念。</p><p>函式是屬於一種資料形式，所以可以放進變數裡面，比如說:</p><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span><span class="params">(n1,n2)</span></span>&#123;</span><br><span class="line">    alert(n1+n2);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//可以放進變數內寫成以下寫法</span></span><br><span class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span> <span class="title">add</span><span class="params">(n1,n2)</span></span>&#123;</span><br><span class="line">    alert(n1+n2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>接續上方的例子，上面的程式碼已經定義add這個變數的資料為<code>function add(n1,n2){alert(n1+n2)</code>這組函式，所以我們可以使用這個變數執行函式:</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">add</span><span class="params">(<span class="number">2</span>,<span class="number">8</span>)</span></span></span><br></pre></td></tr></table></figure><p>用法一樣是add(n1,n2)，將資料填入後會帶入函式內運算執行。</p><p>關於函式部分可以看做，函式用來創造一個新的空間，一般來說如果使用宣告變數，不能再重複一樣的變數名稱做宣告，但是函式內部是一個獨立空間，所以可以在函式內宣告跟函式外一樣的變數名稱，函式會優先在內部尋找宣告，如果找不到符合的變數才會向外部尋找。</p><p>程式碼的規則中，會優先在同一個空間尋找變數，找不到才會向外空間尋找，不會往內尋找。</p><p>函式外的空間稱為全域空間，在這個地方宣告的變數為全域變數。<br>函式內的空間則被稱為區域空間，在函式內宣告的變數則為區域變數。</p><p>全域空間的程式碼則不能使用區域空間內的變數做運算</p><p>舉個例子來說:</p><figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="symbol">x</span>=<span class="number">3</span> </span><br><span class="line"></span><br><span class="line">function test()&#123;</span><br><span class="line">    <span class="keyword">var</span> <span class="symbol">x</span> = <span class="number">5</span>;</span><br><span class="line">    <span class="keyword">var</span> <span class="symbol">y</span> = <span class="number">10</span>;</span><br><span class="line">    alert (<span class="symbol">x</span>+<span class="symbol">y</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>上方程式碼中，在function test外的宣告變數，不能重複宣告var x，function test可以看做是一個區域空間，在這區域空間內就可以宣告與函式外一樣的變數名稱，但是區域變數只有在這個區域空間內有用，以上方的範例來說，會跳出15，但是如果向下方程式碼一樣，刪除了function test內的變數x，則會因為內部沒有宣告為x的變數而往外部空間尋找，這時候就會找到上方第一行寫的var x=3 ，此時這個函數就會跳出13。</p><figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="symbol">x</span>=<span class="number">3</span> </span><br><span class="line"></span><br><span class="line">function test()&#123;</span><br><span class="line">    <span class="keyword">var</span> <span class="symbol">y</span> = <span class="number">10</span>;</span><br><span class="line">    alert (<span class="symbol">x</span>+<span class="symbol">y</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>211003-Day21:終於要進去新手村了-Javascript-函式-建立函式練習</title>
+      <link href="/2021/10/03/211003-Day20-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%87%BD%E5%BC%8F-%E5%BB%BA%E7%AB%8B%E5%87%BD%E5%BC%8F%E7%B7%B4%E7%BF%92/"/>
+      <url>/2021/10/03/211003-Day20-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%87%BD%E5%BC%8F-%E5%BB%BA%E7%AB%8B%E5%87%BD%E5%BC%8F%E7%B7%B4%E7%BF%92/</url>
+      
+        <content type="html"><![CDATA[<p>前一篇有記錄了函式的基本結構，這一篇會用另一個例題方式做練習</p><a id="more"></a><p>例題如下:</p><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span><span class="params">(n1,n2)</span><span class="comment">&#123;</span></span></span><br><span class="line"><span class="function"><span class="comment">    alert(n1+n2);</span></span></span><br><span class="line"><span class="function"><span class="comment">    return n1+n2;</span></span></span><br><span class="line"><span class="function"><span class="comment">&#125;</span></span></span><br><span class="line"><span class="function"><span class="title">var</span> <span class="title">result</span> = <span class="title">add</span><span class="params">(2,3)</span>*<span class="title">add</span><span class="params">(4,5)</span>;</span></span><br><span class="line">alert(<span class="keyword">result</span>);</span><br></pre></td></tr></table></figure><p>我們看到上方函式，先把基本算式架構用函式包起來，另外加上回傳值return<br>(代表函式結束後，函式值會回傳到呼叫的位置，如果沒加上回傳值，當函式跑完後會回傳undefined，就會無法算出add(2,3)<em>add(4,5)這一段的結果)，所以上方這段函式會出現三個警告視窗，第一個是add(2,3)內的警告視窗，加上回傳值後就會將運算好的數值資料5回傳add(2,3)，接下來第二個警告視窗是add(4,5)，也有回傳數值9，第三個則是alert(result)，變數result會因為回傳資料可以看成``var result = 5</em>9;``，經由警告視窗跳出數值為45。</p><p>參考來源:<br><a href="https://www.youtube.com/watch?v=qmrVxIj97g4&amp;list=PL-g0fdC5RMbpqZ0bmvJTgVTS4tS3txRVp&amp;index=15" target="_blank" rel="noopener">https://www.youtube.com/watch?v=qmrVxIj97g4&amp;list=PL-g0fdC5RMbpqZ0bmvJTgVTS4tS3txRVp&amp;index=15</a></p><p><a href="https://ithelp.ithome.com.tw/articles/10211289" target="_blank" rel="noopener">https://ithelp.ithome.com.tw/articles/10211289</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>211003-Day20:終於要進去新手村了-Javascript-函式-建立函式</title>
+      <link href="/2021/10/03/211003-Day18-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%87%BD%E5%BC%8F-%E5%9F%BA%E7%A4%8E%E4%BD%BF%E7%94%A8/"/>
+      <url>/2021/10/03/211003-Day18-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%87%BD%E5%BC%8F-%E5%9F%BA%E7%A4%8E%E4%BD%BF%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<p>終於來到函式的基礎，建立函式了，以下就是基本的語法架構:</p><a id="more"></a><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> 函式名稱(<span class="params">這個位置用來呼應自訂函式內的參數</span>)</span>&#123;</span><br><span class="line">    這個位置放入要執行的內容</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>我們以下舉個簡單的例子:</p><figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span><span class="params">(a,b)</span><span class="comment">&#123;</span></span></span><br><span class="line"><span class="function"><span class="comment">    alert(a+b);</span></span></span><br><span class="line"><span class="function"><span class="comment">&#125;</span></span></span><br><span class="line"><span class="function"><span class="title">test</span><span class="params">(2,3)</span>;</span></span><br></pre></td></tr></table></figure><p>上面我們先建立一個名叫做test的函式，內容放了一個警告視窗，這個警告視窗的資料為a+b，那我們在上面的說明有看到，在函數名稱之後的小括號是要用來呼應自己建立出來的函示內的參數，如果有兩個參數以上就使用逗號”,”將兩個參數值分開，上面設計好了函式之後，下方就將設計好的函式test叫出來，括號裡面分別放進2，3的數字，這時候他會呼應函式內alert(a+b)，a與b的部分會被放進2,3的數值資料，並且作運算以及執行alert函式，這時會跳出警告視窗，數字為5。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>210930-Day19:終於要進去新手村了-javascript-迴圈-break、continue</title>
       <link href="/2021/09/30/210930-Javascript-%E8%BF%B4%E5%9C%88-break%E3%80%81continue/"/>
       <url>/2021/09/30/210930-Javascript-%E8%BF%B4%E5%9C%88-break%E3%80%81continue/</url>
       

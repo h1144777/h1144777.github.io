@@ -186,10 +186,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2021-09-28 22:21:39 / 修改時間：22:41:50" itemprop="dateCreated datePublished" datetime="2021-09-28T22:21:39+08:00">2021-09-28</time>
+              <time title="創建時間：2021-09-28 22:21:39" itemprop="dateCreated datePublished" datetime="2021-09-28T22:21:39+08:00">2021-09-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2021-10-12 22:57:36" itemprop="dateModified" datetime="2021-10-12T22:57:36+08:00">2021-10-12</time>
+              </span>
 
           
   
@@ -217,12 +223,14 @@
 
       
           <p>今天看了彭彭老師的影片，他使用了程式碼做舉例，這篇我會使用他舉例的程式，再另外加上自己筆記讓印象加深</p>
-<p>程式碼如下:</p>
-<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> <span class="keyword">sum</span> = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">var</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (i &lt;= <span class="number">100</span>) &#123;</span><br><span class="line">  <span class="keyword">sum</span> = <span class="keyword">sum</span> + i;  <span class="comment">//也可以寫成sum+=i</span></span><br><span class="line">  i++;</span><br><span class="line">&#125;</span><br><span class="line">alert(<span class="keyword">sum</span>);</span><br></pre></td></tr></table></figure>
-
-<p>這組程式碼的用途是做1<del>100的總和計算，在一開始i=1的時候，因為符合i &lt;= 100的條件所以執行迴圈，依照程式碼由上往下執行分別是sum = sum + i(套入數字後變成sum =0 + 1)，再執行下方i++(++ = + 1 的意思，也就是i+1) 原本i=1再加1後第一次迴圈的i資料變成了2，剛剛執行的sum的資料也變成了1，因為i=2符合i &lt;= 100的條件，所以繼續執行到i=101的時候因為不符合條件跳出迴圈，到下一行alert(sum)，也因為i=101的時候就已經不符合條件跳出迴圈，所以可以知道總和是由0</del>100去做計算，最後結果為5050。</p>
-<p>參考來源:<br><a href="https://www.youtube.com/watch?v=uvLMIXuuc-8&amp;ab_channel=%E5%BD%AD%E5%BD%AD%E7%9A%84%E8%AA%B2%E7%A8%8B" target="_blank" rel="noopener">https://www.youtube.com/watch?v=uvLMIXuuc-8&amp;ab_channel=%E5%BD%AD%E5%BD%AD%E7%9A%84%E8%AA%B2%E7%A8%8B</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/09/28/210928-Javascript-%E8%BF%B4%E5%9C%88-while-%E7%B0%A1%E5%96%AE%E8%88%89%E4%BE%8B/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -596,10 +604,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2021-09-23 00:01:56 / 修改時間：00:34:06" itemprop="dateCreated datePublished" datetime="2021-09-23T00:01:56+08:00">2021-09-23</time>
+              <time title="創建時間：2021-09-23 00:01:56" itemprop="dateCreated datePublished" datetime="2021-09-23T00:01:56+08:00">2021-09-23</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2021-10-12 22:57:47" itemprop="dateModified" datetime="2021-10-12T22:57:47+08:00">2021-10-12</time>
+              </span>
 
           
   
@@ -627,14 +641,14 @@
 
       
           <p>前兩篇文章中有認識到了變數是要用來放資料的，但是有時候會遇到資料內容需要不同的類型，比如說數字，它可以是一串單純文字字串，也可以是要用來做運算的資料，所以這次用到了Number()函數</p>
-<p>這次的舉例也會用prompt()函數，這個函數是一種輸入型函數，用這個函數可以讓瀏覽器出現輸入視窗讓使用者輸入資料。</p>
-<p>比如說</p>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> n1=<span class="built_in">prompt</span>(<span class="string">"請輸入數字"</span>,<span class="string">""</span>);</span><br><span class="line"><span class="built_in">var</span> n2=<span class="built_in">prompt</span>(<span class="string">"請輸入數字"</span>,<span class="string">""</span>);</span><br></pre></td></tr></table></figure>
-<p>此時警告視窗的輸入框內打入數字，程式判別會是字串</p>
-<p>如果加入Number()函數的話</p>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var n1=prompt(<span class="string">"請輸入數字"</span>,<span class="string">""</span>)<span class="comment">;</span></span><br><span class="line">var n2=prompt(<span class="string">"請輸入數字"</span>,<span class="string">""</span>)<span class="comment">;</span></span><br><span class="line">n1=Number(<span class="name">n1</span>)<span class="comment">;</span></span><br><span class="line">n2=Number(<span class="name">n2</span>)<span class="comment">;</span></span><br></pre></td></tr></table></figure>
-<p>此時輸入的數字,也就是變數n1跟n2就會判定成可運算數字。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/09/23/210922-Day7-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E8%B3%87%E6%96%99%E5%9E%8B%E6%85%8B%E8%BD%89%E6%8F%9B-%E5%AD%97%E4%B8%B2/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

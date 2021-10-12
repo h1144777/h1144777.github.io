@@ -188,7 +188,7 @@
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2021-10-12 22:34:59 / 修改時間：22:56:18" itemprop="dateCreated datePublished" datetime="2021-10-12T22:34:59+08:00">2021-10-12</time>
+              <time title="創建時間：2021-10-12 22:34:59 / 修改時間：22:57:18" itemprop="dateCreated datePublished" datetime="2021-10-12T22:34:59+08:00">2021-10-12</time>
             </span>
 
           
@@ -217,14 +217,14 @@
 
       
           <p>今天要先說到關於階層的部分，因為明後天的文章會是關於HTML與JS簡單的一些互動，一樣是由彭彭影片內容加上自己的註解。</p>
-<p>首先我們先看到下方的程式碼:</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">h3</span>&gt;</span>HTML DOM<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">span</span>&gt;</span>階層結構<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">span</span>&gt;</span>樹狀結構<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>首先我們要先認識一下結構，HTML DOM的中文是文件物件模型，其實就是將HTML內的各標籤都視為一個物件，這些物件會有階層，整體展開會變成樹狀圖，我們就以上方程式碼示意一下他的樹狀結構為何。       </p>
-<img src="/images/樹狀圖.jpg" />
-
-<p>下一篇文章我會用一些舉例來加深關於Html Dom的記憶。</p>
-<p>參考資料:<br><a href="https://www.youtube.com/watch?v=iZ3LfVujGCM" target="_blank" rel="noopener">https://www.youtube.com/watch?v=iZ3LfVujGCM</a><br><a href="https://ithelp.ithome.com.tw/articles/10202689" target="_blank" rel="noopener">https://ithelp.ithome.com.tw/articles/10202689</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/10/12/211012-Day27%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-HTML-DOM-%E5%9F%BA%E6%9C%AC%E8%A7%80%E5%BF%B5/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -846,7 +846,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-10-03 21:05:33" itemprop="dateModified" datetime="2021-10-03T21:05:33+08:00">2021-10-03</time>
+                <time title="修改時間：2021-10-12 22:57:31" itemprop="dateModified" datetime="2021-10-12T22:57:31+08:00">2021-10-12</time>
               </span>
 
           
@@ -875,14 +875,14 @@
 
       
           <p>迴圈的概念是滿足設定的條件後一直執行設定好的程式碼，但是還是有方式可以讓迴圈強制跳出整個迴圈或是跳出當次的迴圈，就是使用break以及continue語法，我們下面就來舉例一下，</p>
-<p>break是用來強制跳出整個迴圈，我會在舉例中加上if判斷式，範例如下:</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> <span class="built_in">n</span> = <span class="number">0</span>;</span><br><span class="line">while (<span class="built_in">n</span> &lt;= <span class="number">100</span>) &#123;</span><br><span class="line">  <span class="built_in">if</span> (<span class="built_in">n</span> == <span class="number">20</span>) &#123;</span><br><span class="line">    break;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">n</span>++;</span><br><span class="line">&#125;</span><br><span class="line">alert(<span class="built_in">n</span>);</span><br></pre></td></tr></table></figure>
-<p>上方程式可以解釋為，當n符合條件時，會執行n++，也就是n+1，一開始因為不符合if內n==20的條件，所以迴圈會繼續執行，到了n資料內為20的時候，這時候符合if判斷式，所以執行break強制跳出整個迴圈，並且執行下一行alert(n)，這時候會跳出20。</p>
-<p>continue則是用來跳過當次迴圈，強制進行下一次的迴圈，範例如下:</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> x = <span class="number">0</span>;</span><br><span class="line">for (<span class="built_in">var</span> <span class="built_in">n</span> = <span class="number">1</span>; <span class="built_in">n</span> &lt;= <span class="number">100</span>; <span class="built_in">n</span>++) &#123;</span><br><span class="line">  <span class="built_in">if</span> (<span class="built_in">n</span> % <span class="number">2</span> == <span class="number">0</span>) &#123;     //<span class="built_in">n</span> % <span class="number">2</span> == <span class="number">0</span>的意思是<span class="built_in">n</span>/<span class="number">2</span>的餘數=<span class="number">0</span></span><br><span class="line">    continue;</span><br><span class="line">  &#125;</span><br><span class="line">x++;</span><br><span class="line">&#125;</span><br><span class="line">alert(x);</span><br></pre></td></tr></table></figure>
-<p>上方的例子可以用來判別在1<del>100之中，奇數的數字有多少，因為偶數可以用2除盡，所以我們將判斷式加入了，如果資料數字是可以被2整除的，就執行contiune強制跳出這次迴圈，因為100內的偶數有50個，所以真正跑完這個迴圈的只有奇數的部分，最後整個執行到不符合n &lt;= 100的時候跳出整個迴圈，執行alert，答案會顯示為50，也就是1</del>100內，有50個奇數。</p>
-<p>參考來源:<br><a href="https://www.itread01.com/p/1001077.html" target="_blank" rel="noopener">https://www.itread01.com/p/1001077.html</a><br><a href="https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/261110/" target="_blank" rel="noopener">https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/261110/</a><br><a href="https://www.youtube.com/watch?v=uvLMIXuuc-8" target="_blank" rel="noopener">https://www.youtube.com/watch?v=uvLMIXuuc-8</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/09/30/210930-Javascript-%E8%BF%B4%E5%9C%88-break%E3%80%81continue/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-blog-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/blog-icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/blog-icon-16x16.png">
+  <link rel="mask-icon" href="/images/BLOG%20LOGO.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Arial:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-fill-left.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"h1144777.github.io","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="今天我們舉例的範例依然是由彭彭影片內的範例程式碼加上自己所能理解的方式做個紀錄以及學習。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Day25:終於要進去新手村了-Javascript-函式-物件綜合範例">
+<meta property="og:url" content="https://h1144777.github.io/2021/10/10/Day24-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%87%BD%E5%BC%8F-%E7%89%A9%E4%BB%B6%E7%B6%9C%E5%90%88%E7%AF%84%E4%BE%8B/index.html">
+<meta property="og:site_name" content="h1144777學習日誌">
+<meta property="og:description" content="今天我們舉例的範例依然是由彭彭影片內的範例程式碼加上自己所能理解的方式做個紀錄以及學習。">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2021-10-10T05:27:38.000Z">
+<meta property="article:modified_time" content="2021-10-10T05:51:24.400Z">
+<meta property="article:author" content="祥祥">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://h1144777.github.io/2021/10/10/Day24-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%87%BD%E5%BC%8F-%E7%89%A9%E4%BB%B6%E7%B6%9C%E5%90%88%E7%AF%84%E4%BE%8B/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>Day25:終於要進去新手村了-Javascript-函式-物件綜合範例 | h1144777學習日誌</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158636214-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-158636214-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">h1144777學習日誌</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">從0開始</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>歸檔</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/h1144777" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://h1144777.github.io/2021/10/10/Day24-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%87%BD%E5%BC%8F-%E7%89%A9%E4%BB%B6%E7%B6%9C%E5%90%88%E7%AF%84%E4%BE%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.png">
+      <meta itemprop="name" content="祥祥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="h1144777學習日誌">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Day25:終於要進去新手村了-Javascript-函式-物件綜合範例
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2021-10-10 13:27:38 / 修改時間：13:51:24" itemprop="dateCreated datePublished" datetime="2021-10-10T13:27:38+08:00">2021-10-10</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2021/10/10/Day24-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%87%BD%E5%BC%8F-%E7%89%A9%E4%BB%B6%E7%B6%9C%E5%90%88%E7%AF%84%E4%BE%8B/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/10/10/Day24-終於要進去新手村了-Javascript-函式-物件綜合範例/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>今天我們舉例的範例依然是由彭彭影片內的範例程式碼加上自己所能理解的方式做個紀錄以及學習。</p>
+<a id="more"></a>
+<p>在影片之中是使用遊戲裡的玩家設定來做整個程式碼的架構，程式碼如下方:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> player=<span class="keyword">new</span> <span class="built_in">Object</span>;</span><br><span class="line">player.name=<span class="string">"John"</span>;</span><br><span class="line">player.hp=<span class="number">100</span>;</span><br><span class="line">player.fight=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.hp=<span class="keyword">this</span>.hp<span class="number">-2</span></span><br><span class="line">&#125;;</span><br><span class="line">player.rest=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.hp++</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line">player.report=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="keyword">this</span>.name+<span class="string">":"</span>+<span class="keyword">this</span>.hp)</span><br><span class="line">&#125;;</span><br><span class="line">player.fight();</span><br><span class="line">player.rest();</span><br><span class="line">player.report();</span><br></pre></td></tr></table></figure>
+<p>上方是完整程式碼，我們將程式碼分拆來解釋<br>首先是一開始的角色設定</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var <span class="attribute">player</span>=new Object;</span><br><span class="line">player.<span class="attribute">name</span>=<span class="string">"John"</span>;</span><br><span class="line">player.<span class="attribute">hp</span>=100;</span><br><span class="line">```    </span><br><span class="line">首先我們建立一個空白物件，在遊戲中就是建立玩家的意思，接著``player.<span class="attribute">name</span>=<span class="string">"John"</span>``就是設定角色名稱，``player.hp=100``則是用來設定生命值為100，這個地方可以注意一下，名字的部分因為是字串，所以用引號，但是生命值的部分因為他是會隨著戰鬥會是恢復去做變動，是需要計算的，所以會使用數值。</span><br><span class="line"></span><br><span class="line">再來是關於動態方面，像是戰鬥或是恢復生命值，以及顯示目前狀態</span><br></pre></td></tr></table></figure>
+<p>player.fight=function(){<br>    this.hp=this.hp-2<br>};<br>player.rest=function(){<br>    this.hp++<br>}<br>};<br>player.report=function(){<br>    alert(this.name+”:”+this.hp)<br>};</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">我們首先角色內設定了遇到一次戰鬥會減損2生命值(<span class="selector-tag">player</span><span class="selector-class">.fight</span>)，再來也設定了休息就加回1生命值(<span class="selector-tag">player</span><span class="selector-class">.rest</span>)，最後則是使用警告視窗告訴使用這串程式碼的人角色名稱以及目前的血量(<span class="selector-tag">player</span><span class="selector-class">.report</span>)。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">最後則是使用物件:</span><br></pre></td></tr></table></figure>
+<p>player.fight();<br>player.rest();<br>player.report();</p>
+<pre><code>我們在角色剛開始就已經設定了生命值為100hp(player.hp=100)
+我們戰鬥(player.fight)所以減少了2生命值(this.hp=this.hp-2)，因為休息(player.rest)可以恢復1生命值，最後則是告訴使用者目前的狀況(player.report)，程式碼會跳出警告視窗，說明角色名稱以及目前的血量( alert(this.name+&quot;:&quot;+this.hp))，因為前面一開始設定名稱為John，hp部分則是用原始設定的100去做計算-2加上恢復+1，所以會跳出警告視窗顯示為John:99。
+
+
+
+參考來源:
+https://shubo.io/what-is-this/
+https://www.youtube.com/watch?v=Vwg7BaPBK-Y
+
+</code></pre>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/06/Day24-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%87%BD%E5%BC%8F-%E7%89%A9%E4%BB%B6%E5%BB%BA%E7%AB%8B%E7%B7%B4%E7%BF%92/" rel="prev" title="Day24:終於要進去新手村了-Javascript-函式-物件建立練習">
+      <i class="fa fa-chevron-left"></i> Day24:終於要進去新手村了-Javascript-函式-物件建立練習
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/10/11/Day26-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%87%BD%E5%BC%8F-%E7%89%A9%E4%BB%B6-%E5%BB%BA%E6%A7%8B%E5%BC%8F/" rel="next" title="Day26:終於要進去新手村了-Javascript-函式-物件-建構式">
+      Day26:終於要進去新手村了-Javascript-函式-物件-建構式 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="祥祥"
+      src="/images/head.png">
+  <p class="site-author-name" itemprop="name">祥祥</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">47</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:h1144777@gmail.com" title="E-Mail → mailto:h1144777@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/h1144777" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;h1144777" rel="noopener" target="_blank"><i class="fa fa-fw fa-facebook"></i>FB Page</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://instagram.com/h1144777" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;h1144777" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">祥祥</span>
+</div>
+  <div class="theme-info">主題 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.1
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://h1144777.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+      this.language = "zh_TW";;
+    this.page.url = "https://h1144777.github.io/2021/10/10/Day24-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-Javascript-%E5%87%BD%E5%BC%8F-%E7%89%A9%E4%BB%B6%E7%B6%9C%E5%90%88%E7%AF%84%E4%BE%8B/";
+    this.page.identifier = "2021/10/10/Day24-終於要進去新手村了-Javascript-函式-物件綜合範例/";
+    this.page.title = "Day25:終於要進去新手村了-Javascript-函式-物件綜合範例";
+  
+  
+    
+  };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://h1144777.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>211013-Day28-終於要進去新手村了-HTML DOM 觀念介紹</title>
+      <link href="/2021/10/13/211013-Day28-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-HTML%20DOM%20%E8%A7%80%E5%BF%B5%E4%BB%8B%E7%B4%B9/"/>
+      <url>/2021/10/13/211013-Day28-%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-HTML%20DOM%20%E8%A7%80%E5%BF%B5%E4%BB%8B%E7%B4%B9/</url>
+      
+        <content type="html"><![CDATA[<p>我們上一篇文章講到了HTML DOM的階層以及樹狀圖，接下來我們就舉兩個例子來釐清一下觀念，也讓我自己做個紀錄。</p><a id="more"></a><p>例子1:</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">alert</span>(<span class="selector-tag">window</span><span class="selector-class">.screen</span><span class="selector-class">.width</span>+"*"+<span class="selector-tag">window</span><span class="selector-class">.screen</span><span class="selector-class">.height</span>);</span><br></pre></td></tr></table></figure><img src="https://h1144777.github.io/images/%E6%A8%B9%E7%8B%80%E5%9C%96.jpg" />]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Day27:終於要進去新手村了-HTML DOM 基本觀念</title>
       <link href="/2021/10/12/211012-Day27%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-HTML-DOM-%E5%9F%BA%E6%9C%AC%E8%A7%80%E5%BF%B5/"/>
       <url>/2021/10/12/211012-Day27%E7%B5%82%E6%96%BC%E8%A6%81%E9%80%B2%E5%8E%BB%E6%96%B0%E6%89%8B%E6%9D%91%E4%BA%86-HTML-DOM-%E5%9F%BA%E6%9C%AC%E8%A7%80%E5%BF%B5/</url>
